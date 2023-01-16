@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SambutanksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//sambutan
+Route::get('/sambutanks', [SambutanksController::class, 'sambutanks'])->name('sambutanks');
+Route::get('/tambahdatasambutanks', [SambutanksController::class, 'tambahdatasambutanks'])->name('tambahdatasambutanks');
+
+Route::post('/insertdatasambutanks', [SambutanksController::class, 'insertdatasambutanks'])->name('insertdatasambutanks');
+
+Route::get('/tampildatasambutanks/{id}', [SambutanksController::class, 'tampildatasambutanks'])->name('tampildatasambutanks');
+Route::post('/updatedatasambutanks/{id}', [SambutanksController::class, 'updatedatasambutanks'])->name('updatedatasambutanks');
+
+Route::get('/deletesambutanks/{id}', [SambutanksController::class, 'deletesambutanks'])->name('deletesambutanks');

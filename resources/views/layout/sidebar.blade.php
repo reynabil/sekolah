@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="deznav">
     <div class="deznav-scroll">
         <ul class="metismenu" id="menu">
@@ -15,11 +18,11 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-television"></i>
+                    <i class="fa-solid fa-user"></i>
                     <span class="nav-text">Profil</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="app-profile.html">Sambutan Kepala Sekolah</a></li>
+                    <li><a href="/sambutanks">Sambutan Kepala Sekolah</a></li>
                     <li><a href="app-profile.html">Visi Misi</a></li>
                     <li><a href="app-profile.html">Fasilitas</a></li>
                     <li><a href="app-profile.html">Program Kerja</a></li>
