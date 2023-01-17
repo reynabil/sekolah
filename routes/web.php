@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\SambutanksController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TenagaController;
+use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\PendidikController;
+use App\Http\Controllers\SambutanksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +31,38 @@ Route::get('/tampildatasambutanks/{id}', [SambutanksController::class, 'tampilda
 Route::post('/updatedatasambutanks/{id}', [SambutanksController::class, 'updatedatasambutanks'])->name('updatedatasambutanks');
 
 Route::get('/deletesambutanks/{id}', [SambutanksController::class, 'deletesambutanks'])->name('deletesambutanks');
+
+//peserta
+Route::get('/pesertas', [PesertaController::class, 'pesertas'])->name('pesertas');
+Route::get('/tambahdatapesertas', [PesertaController::class, 'tambahdatapesertas'])->name('tambahdatapesertas');
+
+Route::post('/insertdatapesertas', [PesertaController::class, 'insertdatapesertas'])->name('insertdatapesertas');
+
+Route::get('/tampildatapesertas/{id}', [PesertaController::class, 'tampildatapesertas'])->name('tampildatapesertas');
+Route::post('/updatedatapesertas/{id}', [PesertaController::class, 'updatedatapesertas'])->name('updatedatapesertas');
+
+Route::get('/deletepesertas/{id}', [PesertaController::class, 'deletepesertas'])->name('deletepesertas');
+
+//pendidik
+Route::get('/pendidiks', [PendidikController::class, 'pendidiks'])->name('pendidiks');
+Route::get('/tambahdatapendidiks', [PendidikController::class, 'tambahdatapendidiks'])->name('tambahdatapendidiks');
+
+Route::post('/insertdatapendidiks', [PendidikController::class, 'insertdatapendidiks'])->name('insertdatapendidiks');
+
+Route::get('/tampildatapendidiks/{id}', [PendidikController::class, 'tampildatapendidiks'])->name('tampildatapendidiks');
+Route::post('/updatedatapendidiks/{id}', [PendidikController::class, 'updatedatapendidiks'])->name('updatedatapendidiks');
+
+Route::get('/deletependidiks/{id}', [PendidikController::class, 'deletependidiks'])->name('deletependidiks');
+
+//tenaga
+Route::get('/tenagas', [TenagaController::class, 'tenagas'])->name('tenagas');
+Route::get('/tambahdatatenagas', [TenagaController::class, 'tambahdatatenagas'])->name('tambahdatatenagas');
+
+Route::post('/insertdatatenagas', [TenagaController::class, 'insertdatatenagas'])->name('insertdatatenagas');
+
+Route::get('/tampildatatenagas/{id}', [TenagaController::class, 'tampildatatenagas'])->name('tampildatatenagas');
+Route::post('/updatedatatenagas/{id}', [TenagaController::class, 'updatedatatenagas'])->name('updatedatatenagas');
+
+Route::get('/deletetenagas/{id}', [TenagaController::class, 'deletetenagas'])->name('deletetenagas');
+
+
