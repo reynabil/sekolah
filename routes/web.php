@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TenagaController;
+use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\PendidikController;
 use App\Http\Controllers\VisimisiController;
 use App\Http\Controllers\FasilitasController;
