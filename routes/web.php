@@ -48,9 +48,9 @@ Route::get('/tambahdatafasilitas', [FasilitasController::class, 'tambahdatafasil
 
 Route::post('/insertdatafasilitas', [FasilitasController::class, 'insertdatafasilitas'])->name('insertdatafasilitas');
 
-Route::get('/tampildatafasilitas/{id}', [VisimisiController::class, 'tampildatafasilitas'])->name('tampildatafasilitas');
-Route::post('/updatedatafasilitas/{id}', [VisimisiController::class, 'updatedatafasilitas'])->name('updatedatafasilitas');
+Route::get('/tampildatafasilitas/{id}', [FasilitasController::class, 'tampildatafasilitas'])->name('tampildatafasilitas');
+Route::post('/updatedatafasilitas/{id}', [FasilitasController::class, 'updatedatafasilitas'])->name('updatedatafasilitas');
 
-Route::get('/deletefasilitas/{id}', [VisimisiController::class, 'deletefasilitas'])->name('deletefasilitas');
+Route::get('/deletefasilitas/{id}', [FasilitasController::class, 'deletefasilitas'])->name('deletefasilitas');
 
 
