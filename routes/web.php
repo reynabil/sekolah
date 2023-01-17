@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KelasxController;
 use App\Http\Controllers\TenagaController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\PendidikController;
@@ -64,5 +65,16 @@ Route::get('/tampildatatenagas/{id}', [TenagaController::class, 'tampildatatenag
 Route::post('/updatedatatenagas/{id}', [TenagaController::class, 'updatedatatenagas'])->name('updatedatatenagas');
 
 Route::get('/deletetenagas/{id}', [TenagaController::class, 'deletetenagas'])->name('deletetenagas');
+
+//tenaga
+Route::get('/kelasxes', [KelasxController::class, 'kelasxes'])->name('kelasxes');
+Route::get('/tambahdatakelasxes', [KelasxController::class, 'tambahdatakelasxes'])->name('tambahdatakelasxes');
+
+Route::post('/insertdatakelasxes', [KelasxController::class, 'insertdatakelasxes'])->name('insertdatakelasxes');
+
+Route::get('/tampildatakelasxes/{id}', [KelasxController::class, 'tampildatakelasxes'])->name('tampildatakelasxes');
+Route::post('/updatedatakelasxes/{id}', [KelasxController::class, 'updatedatakelasxes'])->name('updatedatakelasxes');
+
+Route::get('/deletekelasxes/{id}', [KelasxController::class, 'deletekelasxes'])->name('deletekelasxes');
 
 
