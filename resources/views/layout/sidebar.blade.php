@@ -10,11 +10,6 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="/">Dashboard</a></li>
-                    <li><a href="workout-statistic.html">Workout Statistic</a></li>
-                    <li><a href="workoutplan.html">Workout Plan</a></li>
-                    <li><a href="distance-map.html">Distance Map</a></li>
-                    <li><a href="food-menu.html">Diet Food Menu</a></li>
-                    <li><a href="personal-record.html">Personal Record</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -23,9 +18,12 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="/sambutanks">Sambutan Kepala Sekolah</a></li>
-                    <li><a href="app-profile.html">Visi Misi</a></li>
-                    <li><a href="app-profile.html">Fasilitas</a></li>
+                    <li><a href="/visi">Visi Misi</a></li>
+                    <li><a href="/fasilitas">Fasilitas</a></li>
                     <li><a href="app-profile.html">Program Kerja</a></li>
+                    <li><a href="app-profile.html">Ekstrakurikuler</a></li>
+                    <li><a href="app-profile.html">Identitas Sekolah</a></li>
+                    <li><a href="app-profile.html">Sejarah SMK</a></li>
 
                 </ul>
             </li>

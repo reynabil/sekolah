@@ -46,7 +46,7 @@ class SambutanksController extends Controller
     {
         $data = sambutanks::find($id);
         $data->update([
-            'foto' => $request->foto,
+            
             'deskripsi' => $request->deskripsi,
         ]);
         if ($request->hasFile('foto')) {
