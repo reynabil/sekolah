@@ -2,7 +2,7 @@
     <a href="/" class="brand-logo">
         <img class="logo-abbr" src="{{ asset('template/nabil/xhtml/images/logosmk.png') }}" alt="">
         <img class="logo-compact" src="{{ asset('template/nabil/xhtml/images/.png') }}" alt="">
-        <img class="brand-title" src="{{ asset('template/nabil/xhtml/images/.png') }}" alt="">
+        <img class="brand-title" src="{{ asset('template/nabil/xhtml/images/text.png') }}" alt="">
     </a>
 
     <div class="nav-control">

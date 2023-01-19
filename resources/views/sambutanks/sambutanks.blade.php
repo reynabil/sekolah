@@ -40,7 +40,7 @@
                                             <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
                                                 style="width: 40px";>
                                         </td>
-                                        <td>{{ $row->deskripsi }}</td>
+                                        <td>{!! $row->deskripsi !!}</td>
                                         <td>
                                             <a href="/tampildatasambutanks/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>

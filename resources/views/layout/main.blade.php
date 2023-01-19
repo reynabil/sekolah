@@ -722,7 +722,7 @@
 							</li> --}}
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}" role="button" data-toggle="dropdown">
-                                    <img src="{{ asset('template/nabil/xhtml/images/profile/17.jpg') }}" width="20" alt=""/>
+                                    <img src="{{ asset('template/nabil/xhtml/images/admin.png') }}" width="20" alt=""/>
 									<div class="header-info">
 										<span class="text-black"><strong>Peter Parkur</strong></span>
 										<p class="fs-12 mb-0">Super Admin</p>

@@ -14,7 +14,14 @@
             </div>
             <!-- row -->
 
+            <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js"
+                referrerpolicy="origin"></script>
 
+            <script>
+                tinymce.init({
+                    selector: '#mytextarea'
+                });
+            </script>
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Edit Data</h4>
@@ -32,11 +39,25 @@
                         @error('foto')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <div class="mb-3">
-                            <label for="nama" class="form-label">Deskripsi</label>
-                            <input type="text" class="form-control" name="deskripsi" id="deskripsi"
-                                aria-describedby="emailHelp" value="{{ $data->deskripsi }}">
-                        </div>
+
+
+                        <section style="padding-top:10px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Deskripsi
+                                            </div>
+                                            <div class="card-body">
+                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                <textarea name="deskripsi" id="mytextarea">{!! $data->deskripsi !!}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -47,5 +68,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection

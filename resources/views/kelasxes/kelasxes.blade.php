@@ -46,7 +46,7 @@
                                         <td>{{ $row->kelas }}</td>
                                         <td>{{ $row->link }}</td>
                                         <td>
-                                            <a href="/tampildatatenagas/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildatakelasxes/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
