@@ -141,7 +141,7 @@ Route::post('/updatedataempats/{id}', [EmpatController::class, 'updatedataempats
 Route::get('/deleteempats/{id}', [EmpatController::class, 'deleteempats'])->name('deleteempats');
 
 //kegiatan
-Route::get('/sekolahs', [KegiatanController::class, 'kegiatans'])->name('kegiatans');
+Route::get('/kegiatans', [KegiatanController::class, 'kegiatans'])->name('kegiatans');
 Route::get('/tambahdatakegiatans', [KegiatanController::class, 'tambahdatakegiatans'])->name('tambahdatakegiatans');
 
 Route::post('/insertdatakegiatans', [KegiatanController::class, 'insertdatakegiatans'])->name('insertdatakegiatans');
@@ -151,7 +151,7 @@ Route::post('/updatedatakegiatans/{id}', [KegiatanController::class, 'updatedata
 
 Route::get('/deletekegiatans/{id}', [KegiatanController::class, 'deletekegiatans'])->name('deletekegiatans');
 
-//kegiatan
+//sekolah
 Route::get('/sekolahs', [SekolahController::class, 'sekolahs'])->name('sekolahs');
 Route::get('/tambahdatasekolahs', [SekolahController::class, 'tambahdatasekolahs'])->name('tambahdatasekolahs');
 

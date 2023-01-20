@@ -8,7 +8,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Agenda Kegiatan</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/sekolahs">Kegiatan Keagamaan</a></li>
+                    <li class="breadcrumb-item active"><a href="/kegiatans">Kegiatan Keagamaan</a></li>
                     <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
                 </ol>
             </div>
@@ -20,7 +20,7 @@
                     <h4 class="card-title">Edit Data</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/updatedatasekolahs/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                    <form action="/updatedatakegiatans/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                        
                             <div class="mb-3">
