@@ -43,9 +43,10 @@
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-internet"></i>
-                    <span class="nav-text">Bootstrap</span>
+                    <span class="nav-text">Bahan Ajar</span>
                 </a>
                 <ul aria-expanded="false">
+                    <li><a href="ui-accordion.html">Accordion</a></li>
                     <li><a href="ui-alert.html">Alert</a></li>
                     <li><a href="ui-badge.html">Badge</a></li>
                     <li><a href="ui-button.html">Button</a></li>
@@ -67,16 +68,13 @@
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
-                    <span class="nav-text">Plugins</span>
+                    <span class="nav-text">Agenda Kegiatan</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="uc-select2.html">Select 2</a></li>
-                    <li><a href="uc-nestable.html">Nestedable</a></li>
-                    <li><a href="uc-noui-slider.html">Noui Slider</a></li>
-                    <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
-                    <li><a href="uc-toastr.html">Toastr</a></li>
-                    <li><a href="map-jqvmap.html">Jqv Map</a></li>
-                    <li><a href="uc-lightgallery.html">Lightgallery</a></li>
+                    <li><a href="">Kegiatan PPDB</a></li>
+                    <li><a href="/kegiatans">Kegiatan Keagamaan</a></li>
+                    <li><a href="/sekolahs">Kegiatan Sekolah dan PHBN</a></li>
+
                 </ul>
             </li>
             <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">

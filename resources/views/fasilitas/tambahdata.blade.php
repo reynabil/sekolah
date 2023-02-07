@@ -59,7 +59,7 @@
         </div>
     </div>
 @endsection
-{{-- @push('styles')
+<!-- {{-- @push('styles')
     <link href="{{ asset('template/nabil/xhtml/vendor/summernote/summernote.min.css') }}" rel="stylesheet">
 @endpush
 @push('scripts')
@@ -71,4 +71,4 @@
             $('#summernote').summernote();
         })
     </script>
-@endpush --}}
+@endpush --}} -->
