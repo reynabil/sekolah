@@ -25,6 +25,8 @@
                             <label for="formFile" class="form-label">Ikon</label>
                             <input class="form-control" type="text" name="icon" id="icon">
                         </div>
+                        <em style="color: red">- Silahkan Mencari code icon di fontawesome</em><br>
+                        <em style="color: red">- Jika icon tidak muncul cari icon yang lain</em>
                         @error('icon')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -49,8 +51,9 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
                     </form>
+                    <button class="btn btn-warning"><a href="/fasilitas">kembali</a></button>
                 </div>
             </div>
         </div>

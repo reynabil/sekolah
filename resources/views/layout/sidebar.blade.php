@@ -9,7 +9,10 @@
                     <span class="nav-text">Dashboard</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="/admin">Dashboard</a></li>
+                    <li><a href="/slider">Slider</a></li>
+                    <li><a href="/border">Border</a></li>
+                    <li><a href="/news">Berita</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -20,21 +23,21 @@
                     <li><a href="/sambutanks">Sambutan Kepala Sekolah</a></li>
                     <li><a href="/visi">Visi Misi</a></li>
                     <li><a href="/fasilitas">Fasilitas</a></li>
-                    <li><a href="app-profile.html">Program Kerja</a></li>
-                    <li><a href="app-profile.html">Ekstrakurikuler</a></li>
-                    <li><a href="app-profile.html">Identitas Sekolah</a></li>
-                    <li><a href="app-profile.html">Sejarah SMK</a></li>
+                    <li><a href="/proker">Program Kerja</a></li>
+                    <li><a href="/ekskul">Ekstrakurikuler</a></li>
+                    <li><a href="/identitas">Identitas Sekolah</a></li>
+                    <li><a href="/history">Sejarah SMK</a></li>
 
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-controls-3"></i>
+                <i class="fa-solid fa-circle-info"></i>
                     <span class="nav-text">Data Info PTK & PD</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/pesertas">Data Peserta Didik</a></li>
-                    <li><a href="/pendidiks">Data Pendidik</a></li>
-                    <li><a href="/tenagas">Data Tenaga Non Pendidik</a></li>
+                    <li><a href="/peserta">Data Peserta Didik</a></li>
+                    <li><a href="/pendidik">Data Pendidik</a></li>
+                    <li><a href="/tenaga">Data Tenaga Non Pendidik</a></li>
 
                 </ul>
             </li>
@@ -43,7 +46,6 @@
                     <span class="nav-text">Bootstrap</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="ui-accordion.html">Accordion</a></li>
                     <li><a href="ui-alert.html">Alert</a></li>
                     <li><a href="ui-badge.html">Badge</a></li>
                     <li><a href="ui-button.html">Button</a></li>
@@ -123,13 +125,5 @@
                 </ul>
             </li>
         </ul>
-        <div class="add-menu-sidebar">
-            <img src="images/calendar.png" alt="" class="mr-3">
-            <p class="	font-w500 mb-0">Create Workout Plan Now</p>
-        </div>
-        <div class="copyright">
-            <p><strong>Gymove Fitness Admin Dashboard</strong> © 2020 All Rights Reserved</p>
-            <p>Made with <span class="heart"></span> by DexignZone</p>
-        </div>
     </div>
 </div>

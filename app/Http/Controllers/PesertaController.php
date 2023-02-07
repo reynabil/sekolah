@@ -7,16 +7,16 @@ use Illuminate\Http\Request;
 
 class PesertaController extends Controller
 {
-    public function pesertas()
+    public function peserta()
     {
         $data = peserta::all();
         return view('pesertas.pesertas', compact('data'));
     }
-    public function tambahdatapesertas()
+    public function tambahdatapeserta()
     {
         return view('pesertas.tambahdatapesertas');
     }
-    public function insertdatapesertas(Request $request)
+    public function insertdatapeserta(Request $request)
     {
         $this->validate($request, [
             'foto' => 'required',
@@ -33,7 +33,7 @@ class PesertaController extends Controller
         }
         return redirect()->route('pesertas')->with('success', 'Data Berhasil Di Tambahkan');
     }
-    public function tampildatapesertas($id)
+    public function tampildatapeserta($id)
     {
 
         $data = peserta::find($id);
@@ -51,7 +51,7 @@ class PesertaController extends Controller
         }
         return redirect()->route('pesertas')->with('success', 'Data Berhasil Di Update');
     }
-    public function deletepesertas($id)
+    public function deletepeserta($id)
     {
 
         $data = peserta::findorfail($id);

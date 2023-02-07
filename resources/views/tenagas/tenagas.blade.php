@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatatenagas" class="btn btn-success mb-5">Tambah Data</a>
+                            <a href="/tambahdatatenaga" class="btn btn-success mb-5">Tambah Data</a>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -48,7 +48,7 @@
                                         <td>{{ $row->status }}</td>
                                         <td>{{ $row->tmt }}</td>
                                         <td>
-                                            <a href="/tampildatatenagas/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildatatenaga/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -77,7 +77,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/deletetenagas/" + mahasiswaid + ""
+                        window.location = "/deletetenaga/" + mahasiswaid + ""
                         swal("Data telah dihapus!", {
                             icon: "success",
                         });

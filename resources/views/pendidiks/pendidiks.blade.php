@@ -20,12 +20,11 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatapendidiks" class="btn btn-success mb-5">Tambah Data</a>
+                            <a href="/tambahdatapendidik" class="btn btn-success mb-5">Tambah Data</a>
                             <thead>
                                 <tr>
                                     <th>#</th>
 									<th>Foto</th>
-                                    <th>NIP</th>
                                     <th>NAMA</th>
                                     <th>PANGKAT</th>
                                     <th>TUGAS</th>
@@ -41,14 +40,13 @@
                                         <th scope="row">{{ $no++ }}</th>
 										<td>
                                             <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
-                                                style="width: 40px";>
+                                                style="width: 80px";>
                                         </td>
-                                        <td>{{ $row->nip }}</td>
                                         <td>{{ $row->nama }}</td>
-                                        <td>{{ $row->pangkat }}</td>
+                                        <td>{{ $row->pangkat_gol }}</td>
                                         <td>{{ $row->tugas }}</td>
                                         <td>
-                                            <a href="/tampildatapendidiks/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildatapendidik/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -77,7 +75,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/deletependidiks/" + mahasiswaid + ""
+                        window.location = "/deletependidik/" + mahasiswaid + ""
                         swal("Data telah dihapus!", {
                             icon: "success",
                         });

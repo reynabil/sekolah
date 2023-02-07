@@ -8,7 +8,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/sambutanks">Visi Misi</a></li>
+                    <li class="breadcrumb-item active"><a href="/visi">Visi Misi</a></li>
                     <li class="breadcrumb-item active"><a href="">Edit data </a></li>
                 </ol>
             </div>
@@ -29,8 +29,13 @@
                 <div class="card-body">
                     <form action="/updatedatavisi/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
-
-
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Masukkan Foto</label>
+                            <input class="form-control" type="file" name="foto" id="foto"
+                                value="{{ $data->foto }}">
+                            <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->foto) }}" alt=""
+                                style="width: 300px;">
+                        </div>
                         <div class="mb-3">
                             <label for="nama" class="form-label">Visi</label>
                             <input type="text" class="form-control" name="visi" id="visi"
@@ -39,7 +44,6 @@
                         @error('visi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-
                         <section style="padding-top:10px;">
                             <div class="container">
                                 <div class="row">
@@ -57,7 +61,6 @@
                                 </div>
                             </div>
                         </section>
-
 
                         <section style="padding-top:10px;">
                             <div class="container">
@@ -77,7 +80,6 @@
                             </div>
                         </section>
 
-
                         <section style="padding-top:10px;">
                             <div class="container">
                                 <div class="row">
@@ -95,11 +97,10 @@
                                 </div>
                             </div>
                         </section>
-
-
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary mb-3">Simpan
+                        </button>
                     </form>
+                    <button class="btn btn-warning"><a href="/visi">kembali</a></button>
                 </div>
             </div>
         </div>

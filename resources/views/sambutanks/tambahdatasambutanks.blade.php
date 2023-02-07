@@ -65,16 +65,3 @@
         </div>
     </div>
 @endsection
-{{-- @push('styles')
-    <link href="{{ asset('template/nabil/xhtml/vendor/summernote/summernote.min.css') }}" rel="stylesheet">
-@endpush
-@push('scripts')
-    <script src="{{ asset('template/nabil/xhtml/vendor/summernote/summernote.min.js') }}">
-    </script>
-    <script src="{{ asset('template/nabil/xhtml/js/plugins-init/summernote-init.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $('#summernote').summernote();
-        })
-    </script>
-@endpush --}}

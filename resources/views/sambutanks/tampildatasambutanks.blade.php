@@ -14,14 +14,6 @@
             </div>
             <!-- row -->
 
-            <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js"
-                referrerpolicy="origin"></script>
-
-            <script>
-                tinymce.init({
-                    selector: '#mytextarea'
-                });
-            </script>
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Edit Data</h4>
@@ -40,30 +32,42 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Deskripsi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="deskripsi" id="mytextarea">{!! $data->deskripsi !!}</textarea>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">judul</label>
+                            <input class="form-control" type="text" value="{{ $data->judul }}" name="judul"
+                                id="judul">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">nama</label>
+                            <input class="form-control" type="text" value="{{ $data->nama }}" name="nama"
+                                id="nama">
+                        </div>
+                        <div>
+                            <section style="padding-top:10px;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    Deskripsi
+                                                </div>
+                                                <div class="card-body">
+                                                    {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                    <textarea name="deskripsi" id="mytextarea">{!! $data->deskripsi !!}</textarea>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
                     </form>
+                    <button class="btn btn-warning"><a href="/sambutanks">kembali</a></button>
                 </div>
             </div>
         </div>

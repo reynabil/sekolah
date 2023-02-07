@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\berita;
 use App\Models\visimisi;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,12 @@ class VisimisiController extends Controller
     {
         $data = visimisi::all();
         return view('visimisi.visimisi', compact('data'));
+    }
+    public function visim()
+    {
+        $berita = berita::all();
+        $data = visimisi::first();
+        return view('visimisi.visi',compact('data','berita'));
     }
     public function tambahdatavisi()
     {
@@ -53,6 +60,11 @@ class VisimisiController extends Controller
             'tujuan' => $request->tujuan,
             'komitmen' => $request->komitmen,
         ]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotosekolah/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
         return redirect()->route('visi')->with('success', 'Data Berhasil Di Update');
     }
     public function deletevisi($id)

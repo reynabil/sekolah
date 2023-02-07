@@ -32,8 +32,21 @@
                     <form action="/insertdatavisi" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="floatingTextarea2">Visi</label>
-                            <textarea class="form-control" id="visi" name="visi" style="height: 100px"></textarea>
+                            <label for="formFile" class="form-label">Masukkan Foto</label>
+                            <input class="form-control" type="file" name="foto" id="foto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Judul</label>
+                            <input type="text" name="judul" class="form-control" id="judul"
+                                aria-describedby="emailHelp">
+                        </div>
+                        @error('judul')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Visi</label>
+                            <input type="text" name="visi" class="form-control" id="visi"
+                                aria-describedby="emailHelp">
                         </div>
                         @error('visi')
                             <div class="text-danger">{{ $message }}</div>
@@ -45,7 +58,7 @@
                                     <div class="col-md-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                Deskripsi
+                                                Misi
                                             </div>
                                             <div class="card-body">
                                                 {{--  <form method="POST" enctype="multipart/form-data">  --}}

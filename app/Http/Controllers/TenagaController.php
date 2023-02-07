@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class TenagaController extends Controller
 {
-    public function tenagas()
+    public function tenaga()
         {
             $data = tenaga::all();
             return view('tenagas.tenagas', compact('data'));
@@ -15,7 +15,7 @@ class TenagaController extends Controller
         {
             return view('tenagas.tambahdatatenagas');
         }
-        public function insertdatatenagas(Request $request)
+        public function insertdatatenaga(Request $request)
         {
             $this->validate($request, [
                 'foto' => 'required',
@@ -37,7 +37,7 @@ class TenagaController extends Controller
                 'status' => $request->status,
                 'tmt' => $request->tmt,
             ]);
-            
+
             if ($request->hasFile('foto')) {
                 $request->file('foto')->move('fotosekolah/', $request->file('foto')->getClientOriginalName());
                 $data->foto = $request->file('foto')->getClientOriginalName();
@@ -48,11 +48,11 @@ class TenagaController extends Controller
         }
         public function tampildatatenagas($id)
         {
-    
+
             $data = tenaga::find($id);
             return view('tenagas.tampildatatenagas', compact('data'));
         }
-        public function updatedatatenagas(request $request, $id)
+        public function updatedatatenaga(request $request, $id)
         {
             $data = tenaga::find($id);
             $data->update([
@@ -67,16 +67,16 @@ class TenagaController extends Controller
                 $data->foto = $request->file('foto')->getClientOriginalName();
                 $data->save();
             }
-            
+
             return redirect()->route('tenagas')->with('success', 'Data Berhasil Di Update');
         }
-        public function deletetenagas($id)
+        public function deletetenaga($id)
         {
-    
+
             $data = tenaga::findorfail($id);
             $data->delete();
             return back()->with('info', 'Data berhasil dihapus');
-    
+
         }
 
 }

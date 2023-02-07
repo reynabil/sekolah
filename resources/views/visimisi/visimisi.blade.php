@@ -20,10 +20,10 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatavisi" class="btn btn-success mb-5">Tambah Data</a>
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Foto</th>
                                     <th>Visi</th>
                                     <th>Misi</th>
                                     <th>Tujuan</th>
@@ -38,6 +38,9 @@
                                 @foreach ($data as $row)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
+                                        <td>
+                                            <img src="{{ asset('fotosekolah/'. $row->foto) }}" style="width: 300px" alt="">
+                                        </td>
                                         <td>{!! $row->visi !!}</td>
                                         <td>{!! $row->misi !!}</td>
                                         <td>{!! $row->tujuan !!}</td>
@@ -45,9 +48,6 @@
                                         <td>
                                             <a href="/tampildatavisi/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
-                                            <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
-                                                data-nama_dosen="{{ $row->nama_dosen }}"><i
-                                                    class="fa-sharp fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -58,7 +58,8 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
+        integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
     <script>
         $('.delete').click(function() {
             var mahasiswaid = $(this).attr('data-id');

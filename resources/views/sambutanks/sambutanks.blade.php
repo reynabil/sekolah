@@ -20,11 +20,12 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatasambutanks" class="btn btn-success mb-5">Tambah Data</a>
                             <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>Foto</th>
+                                    <th>Judul</th>
+                                    <th>Nama</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -37,16 +38,16 @@
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>
+
                                             <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
                                                 style="width: 40px";>
                                         </td>
+                                        <td>{!! $row->judul !!}</td>
+                                        <td>{!! $row->nama !!}</td>
                                         <td>{!! $row->deskripsi !!}</td>
                                         <td>
                                             <a href="/tampildatasambutanks/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
-                                            <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
-                                                data-nama_dosen="{{ $row->nama_dosen }}"><i
-                                                    class="fa-sharp fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

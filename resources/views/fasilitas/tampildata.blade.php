@@ -9,7 +9,7 @@
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/fasilitas">Fasilitas</a></li>
-                    <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
+                    <li class="breadcrumb-item active"><a href="">Edit Data </a></li>
                 </ol>
             </div>
 
@@ -19,16 +19,17 @@
                     <h4 class="card-title">Tambah Data</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/updatedatafasilitas" method="POST" enctype="multipart/form-data">
+                    <form action="/updatedatafasilitas/ {{$data->id}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Ikon</label>
                             <input class="form-control" type="text" value="{{ $data->icon }}" name="icon" id="icon">
                         </div>
+                        <em style="color: red">- Silahkan Mencari code icon di fontawesome</em><br>
+                        <em style="color: red">- Jika icon tidak muncul cari icon yang lain</em>
                         @error('icon')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-
 
 
                         <div class="mb-3">
@@ -49,8 +50,9 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
                     </form>
+                    <button class="btn btn-warning"><a href="/fasilitas">kembali</a></button>
                 </div>
             </div>
         </div>

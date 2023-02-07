@@ -16,9 +16,8 @@ return new class extends Migration
         Schema::create('pendidiks', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
-            $table->string('nip');
             $table->string('nama');
-            $table->string('pangkat');
+            $table->string('pangkat_gol');
             $table->string('tugas');
             $table->timestamps();
         });

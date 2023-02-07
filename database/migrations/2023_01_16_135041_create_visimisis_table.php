@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('visimisis', function (Blueprint $table) {
             $table->id();
+            $table->string('foto');
             $table->text('visi');
             $table->text('misi');
             $table->text('tujuan');

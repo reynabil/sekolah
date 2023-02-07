@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\berita;
+use App\Models\ekskul;
 use App\Models\sambutanks;
 use Illuminate\Http\Request;
 
@@ -10,7 +12,16 @@ class SambutanksController extends Controller
     public function sambutanks()
     {
         $data = sambutanks::all();
+
         return view('sambutanks.sambutanks', compact('data'));
+    }
+    public function sambutan()
+
+    {
+        $berita = berita::all();
+        $ekskul = ekskul::first();
+        $data = sambutanks::first();
+        return view('sambutanks.sambutan', compact('data','ekskul','berita'));
     }
     public function tambahdatasambutanks()
     {
@@ -46,7 +57,9 @@ class SambutanksController extends Controller
     {
         $data = sambutanks::find($id);
         $data->update([
-            
+
+            'judul' => $request->judul,
+            'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
         ]);
         if ($request->hasFile('foto')) {

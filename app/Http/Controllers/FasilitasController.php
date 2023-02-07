@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\berita;
 use App\Models\fasilitas;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,12 @@ class FasilitasController extends Controller
     {
         $data = fasilitas::all();
         return view('fasilitas.fasilitas', compact('data'));
+    }
+    public function fase()
+    {
+        $berita = berita::all();
+        $data = fasilitas::all();
+        return view('fasilitas.fase',compact('data','berita'));
     }
     public function tambahdatafasilitas()
     {

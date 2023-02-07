@@ -7,7 +7,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/sambutanks">Sambutan Kepala sekolah</a></li>
+                    <li class="breadcrumb-item active"><a href="/fasilitas">Fasilitas</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -15,7 +15,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Sambutan Kepala Sekolah</h4>
+                    <h4 class="card-title">Fasilitas</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
