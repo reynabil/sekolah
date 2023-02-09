@@ -8,7 +8,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK & PD</a>
                 </li>
-                <li class="breadcrumb-item active"><a href="/pesertas">Data Peserta Didik</a></li>
+                <li class="breadcrumb-item active"><a href="/peserta">Data Peserta Didik</a></li>
                 <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
             </ol>
         </div>

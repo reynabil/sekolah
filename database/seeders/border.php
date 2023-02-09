@@ -22,7 +22,7 @@ class border extends Seeder
             <p>Juara 3 Teknik Perancangan Model 3D</p>',
             'judul2' => 'Tentang Pendidikan',
             'deskripsi2' => '<p>Pembelajaran menggunakan kurikulum merdeka dan terdapat 8 kompetensi keahlian di SMKN 1 Pasuruan</p>',
-            'judul3' => 'Berdiri Sejak Tahun 200',
+            'judul3' => 'Berdiri Sejak Tahun 2000',
             'deskripsi3' => '<p>Pada Tahun 2000 SMEA Negeri Pasuruan diubah nama menjadi SMK Negeri 1 Pasuruan </p>',
         ]);
 

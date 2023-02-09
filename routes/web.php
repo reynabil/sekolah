@@ -29,7 +29,7 @@ use App\Http\Controllers\SambutanksController;
 |
 */
 
-Route::get('/admin', function () {
+Route::get('/administrator', function () {
     return view('welcome');
 });
 
@@ -103,6 +103,9 @@ Route::get('/deleteekskul/{id}', [EkskulController::class, 'deleteekskul'])->nam
 
 //peserta
 Route::get('/peserta', [PesertaController::class, 'peserta'])->name('peserta');
+Route::get('/data/{id}', [PesertaController::class, 'data'])->name('data');
+Route::get('/dataXI/{id}', [PesertaController::class, 'dataXI'])->name('dataXI');
+Route::get('/dataXII/{id}', [PesertaController::class, 'dataXII'])->name('dataXII');
 Route::get('/tambahdatapeserta', [PesertaController::class, 'tambahdatapeserta'])->name('tambahdatapeserta');
 
 Route::post('/insertdatapeserta', [PesertaController::class, 'insertdatapeserta'])->name('insertdatapeserta');

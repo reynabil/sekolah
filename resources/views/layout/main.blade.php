@@ -806,6 +806,8 @@
 
         <!-- Dashboard 1 -->
         <script src="{{ asset('template/nabil/xhtml/js/dashboard/dashboard-1.js') }}"></script>
+        <script src="{{ asset('template/nabil/xhtml/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('template/nabil/xhtml/js/plugins-init/datatables.init.js') }}"></script>
         <script>
             function carouselReview() {
                 /*  testimonial one function by = owl.carousel.js */

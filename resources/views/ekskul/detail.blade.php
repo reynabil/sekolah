@@ -18,7 +18,8 @@
                 <div class="col-sm-9 mb-30">
                     <div class="course__details_block">
                         <div class="course__figure_img">
-                            <img src="{{ asset('fotosekolah/' . $cari->fotod) }}" alt="" style="";>
+                            <img src="{{ asset('fotosekolah/' . $cari->fotod) }}" alt="" style="width: 800px;
+                            height: 400px;";>
                         </div>
                         <div class="course__text_details mt-40">
                             <h1 class="mb-20">{{ $cari->judul }}</h1>

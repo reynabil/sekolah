@@ -36,6 +36,9 @@ class DatabaseSeeder extends Seeder
             border::class,
             proker::class,
             pendidik::class,
+            peserta::class,
+            sebelas::class,
+            duabelas::class,
 
         ]);
     }
