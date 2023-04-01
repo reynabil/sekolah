@@ -6,13 +6,16 @@
         <ul class="metismenu" id="menu">
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-networking"></i>
-                    <span class="nav-text">Dashboard</span>
+                    <span class="nav-text">Beranda</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/admin">Dashboard</a></li>
+                    <li><a href="/administrator">Dashboard</a></li>
                     <li><a href="/slider">Slider</a></li>
                     <li><a href="/border">Border</a></li>
                     <li><a href="/news">Berita</a></li>
+                    <li><a href="/article">Artikel</a></li>
+                    <li><a href="/fotohome">Kegiatan Terakhir</a></li>
+                    <li><a href="/kontak">Pesan</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -27,11 +30,12 @@
                     <li><a href="/ekskul">Ekstrakurikuler</a></li>
                     <li><a href="/identitas">Identitas Sekolah</a></li>
                     <li><a href="/history">Sejarah SMK</a></li>
+                    <li><a href="/kompetensikeahlianindex">Kompetensi Keahlian</a></li>
 
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="fa-solid fa-circle-info"></i>
+                    <i class="fa-solid fa-circle-info"></i>
                     <span class="nav-text">Data Info PTK & PD</span>
                 </a>
                 <ul aria-expanded="false">
@@ -42,68 +46,51 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-internet"></i>
+                    <i class="fa-solid fa-chalkboard-user"></i>
                     <span class="nav-text">Bahan Ajar</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="ui-accordion.html">Accordion</a></li>
-                    <li><a href="ui-alert.html">Alert</a></li>
-                    <li><a href="ui-badge.html">Badge</a></li>
-                    <li><a href="ui-button.html">Button</a></li>
-                    <li><a href="ui-modal.html">Modal</a></li>
-                    <li><a href="ui-button-group.html">Button Group</a></li>
-                    <li><a href="ui-list-group.html">List Group</a></li>
-                    <li><a href="ui-media-object.html">Media Object</a></li>
-                    <li><a href="ui-card.html">Cards</a></li>
-                    <li><a href="ui-carousel.html">Carousel</a></li>
-                    <li><a href="ui-dropdown.html">Dropdown</a></li>
-                    <li><a href="ui-popover.html">Popover</a></li>
-                    <li><a href="ui-progressbar.html">Progressbar</a></li>
-                    <li><a href="ui-tab.html">Tab</a></li>
-                    <li><a href="ui-typography.html">Typography</a></li>
-                    <li><a href="ui-pagination.html">Pagination</a></li>
-                    <li><a href="ui-grid.html">Grid</a></li>
-
+                    <li><a href="/kelasxes">Bahan Ajar Kelas X</a></li>
+                    <li><a href="/kelasxis">Bahan Ajar Kelas XI</a></li>
+                    <li><a href="/tigas">Bahan Ajar Kelas XII</a></li>
+                    <li><a href="/empats">Bahan Ajar Kelas XIII KA</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="fa-solid fa-chart-line"></i>
+                    <i class="fa-solid fa-chart-line"></i>
                     <span class="nav-text">Agenda Kegiatan</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="#">Kegiatan PPDB</a></li>
+                    <li><a href="/ppdb">Kegiatan PPDB</a></li>
                     <li><a href="/kegiatans">Kegiatan Keagamaan</a></li>
                     <li><a href="/sekolahs">Kegiatan Sekolah dan PHBN</a></li>
+                    <li><a href="/galeri">Galeri</a></li>
+                    <li><a href="/lulusan">Info Kelulusan</a></li>
 
                 </ul>
             </li>
-            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-settings-2"></i>
-                    <span class="nav-text">Widget</span>
-                </a>
-            </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-notepad"></i>
-                    <span class="nav-text">Forms</span>
+                    <span class="nav-text">BKK</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="form-element.html">Form Elements</a></li>
-                    <li><a href="form-wizard.html">Wizard</a></li>
-                    <li><a href="form-editor-summernote.html">Summernote</a></li>
-                    <li><a href="form-pickers.html">Pickers</a></li>
-                    <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
+                    <li><a href="/visimisib">Visi Misi</a></li>
+                    <li><a href="/struktur">Struktur Organisasi BKK</a></li>
+                    <li><a href="/sasaranmutuindex">Sasaran Mutu</a></li>
+                    <li><a href="/lowongankerja">Informasi Lowongan Kerja</a></li>
+                    <li><a href="/pengumuman">Pengumuman Penerimaan Kerja</a></li>
+                    <li><a href="/kegiatanbkkindex">Kegiatan BKK</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-network"></i>
-                    <span class="nav-text">Table</span>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="nav-text">Alumni</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                    <li><a href="table-datatable-basic.html">Datatable</a></li>
+                    <li><a href="/alumniindex">Profil Alumni</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Pages</span>
                 </a>
@@ -121,7 +108,7 @@
                     </li>
                     <li><a href="page-lock-screen.html">Lock Screen</a></li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>

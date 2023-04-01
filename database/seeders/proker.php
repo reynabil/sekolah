@@ -16,7 +16,7 @@ class proker extends Seeder
     public function run()
     {
         DB::table('prokers')->insert([
-            'foto' => 'kompetensi.jpg',
+            'foto' => 'peringatan.jpg',
             'tujuan' => 'Melakukan Perencanaan PPDB',
             'kegiatan' => 'Melakukan koordinasi dengan kepala wakil,wakil kepala dan ketua kompeten',
             'indikator' => '<p> 1. Tersusunnya materi promosi</p>
@@ -95,7 +95,7 @@ class proker extends Seeder
             'batas_waktu' => '2023-02-06',
         ]);
         DB::table('prokers')->insert([
-            'foto' => 'voli.jpeg',
+            'foto' => '1679889948.jpeg',
             'tujuan' => '<h3>Pemantauan Kegiatan Ekstrakurikuler</h3>',
             'kegiatan' =>'<p>1. Menentukan Pembina sebagai penanggung jawab kegiatan</p>
             <p>2. menetapkan jadwal kegiatan</p>',

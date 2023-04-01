@@ -7,7 +7,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/sambutanks">Perkembangan Kompetensi Keahlian</a></li>
+                    <li class="breadcrumb-item active"><a href="/history">Perkembangan Kompetensi Keahlian</a></li>
                     <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
                 </ol>
             </div>
@@ -29,30 +29,30 @@
                             <label for="exampleInputEmail1" class="form-label">Judul</label>
                             <input type="text" name="judul" class="form-control" id="judul">
                         </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Masukkan Foto</label>
-                            <input class="form-control" type="file" name="foto" id="foto">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input name="foto" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
                         </div>
                         @error('foto')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Deskripsi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="deskripsi" id="mytextarea"></textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="deskripsi" class="summernote"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror

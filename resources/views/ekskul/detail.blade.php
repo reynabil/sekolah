@@ -3,14 +3,7 @@
 
 @section('content')
     <!-- Intro Section -->
-    <section class="inner-intro bg-img light-color overlay-before parallax-background"
-        style="background-image: url('{{ asset('education/theembazaar.com/tf/educate/assets/images/banner/testsmk1.jpg') }}')">
-        <div class="container">
-            <div class="row title">
-                <h1 data-title="Blog"><span>Detail Ekstrakurikuler</span></h1>
-            </div>
-        </div>
-    </section>
+    <x-section title="Detail Ekstrakurikuler"></x-section>
     <!-- Intro Section -->
     <section class="course-section__block padding ptb-xs-60">
         <div class="container">
@@ -18,7 +11,7 @@
                 <div class="col-sm-9 mb-30">
                     <div class="course__details_block">
                         <div class="course__figure_img">
-                            <img src="{{ asset('fotosekolah/' . $cari->fotod) }}" alt="" style="width: 800px;
+                            <img src="{{ asset('fotoekskul/' . $cari->foto) }}" alt="" style="width: 800px;
                             height: 400px;";>
                         </div>
                         <div class="course__text_details mt-40">

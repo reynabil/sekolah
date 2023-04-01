@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class alumni extends Model
+{
+    use HasFactory;
+
+    protected $guarded = [];
+
+    // public function bioalumnis()
+    // {
+    //     return $this->hasMany(bioalumni::class,'nama_alumni','id');
+    // }
+}

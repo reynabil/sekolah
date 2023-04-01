@@ -16,9 +16,9 @@ class slider extends Seeder
     public function run()
     {
         DB::table('sliders')->insert([
-            'slider1' => 'testsmk.jpg',
-            'slider2' => 'testsmk1.jpg',
-            'slider3' => 'testsmk3.jpg',
+            'slider1' => '1679396644.jpeg',
+            'slider2' => '1679402785.jpg',
+            'slider3' => '1679402696.png',
         ]);
     }
 }

@@ -13,13 +13,13 @@ class SejarahController extends Controller
     {
         $berita = berita::all();
         $perkembangan = perkembangan::all();
-        $data = sejarah::first();
+        $data = sejarah::findorfail(1);
         return view('sejarah.sejarah',compact('data','perkembangan','berita'));
     }
     public function history()
     {
         $data = sejarah::all();
-        $perkembangan = perkembangan::all();
+        $perkembangan = perkembangan::paginate(6);
         return view('sejarah.history',compact('perkembangan','data'));
     }
     public function tambahdataperkembangan()
@@ -31,12 +31,14 @@ class SejarahController extends Controller
         $this->validate($request, [
             'tahun' => 'required',
             'judul' => 'required',
-            'foto' => 'required',
+            'foto' => 'required|image|mimes:png,jpg,jpeg',
             'deskripsi' => 'required',
         ], [
             'tahun.required' => 'Harus Diisi',
             'judul.required' => 'Harus Diisi',
             'foto.required' => 'Harus Diisi',
+            'foto.image' => 'Harus Berupa Gambar',
+            'foto.mimes' => 'Harus Berupa Extensi JPG,PNG,JPEG  ',
             'deskripsi.required' => 'Harus Diisi',
         ]);
         $perkembangan = perkembangan::create([
@@ -61,6 +63,7 @@ class SejarahController extends Controller
     public function updatedataperkembangan(request $request, $id)
     {
         $perkembangan = perkembangan::find($id);
+        $filename = $perkembangan->foto;
         $perkembangan->update([
 
             'tahun' => $request->tahun,
@@ -68,10 +71,17 @@ class SejarahController extends Controller
             'deskripsi' => $request->deskripsi,
         ]);
         if ($request->hasFile('foto')) {
-            $request->file('foto')->move('fotosekolah/', $request->file('foto')->getClientOriginalName());
-            $perkembangan->foto = $request->file('foto')->getClientOriginalName();
-            $perkembangan->save();
+            // hapus file lama jika ada
+            if ($perkembangan->foto && file_exists(public_path('fotosekolah/' . $perkembangan->foto))) {
+                unlink(public_path('fotosekolah/' . $perkembangan->foto));
+            }
+
+            $random = $request->file('foto')->getClientOriginalExtension();
+            $filename = time().'.'.$random;
+            $request->file('foto')->move('fotosekolah/',$filename);
         }
+        $perkembangan->foto = $filename;
+        $perkembangan->save();
         return redirect()->route('history')->with('success', 'Data Berhasil Di Update');
     }
     public function deleteperkembangan($id)
@@ -79,7 +89,7 @@ class SejarahController extends Controller
 
         $perkembangan = perkembangan::findorfail($id);
         $perkembangan->delete();
-        return back()->with('info', 'Data berhasil dihapus');
+        return back()->with('success', 'Data berhasil dihapus');
     }
     public function tampildatasejarah($id)
     {
@@ -88,16 +98,24 @@ class SejarahController extends Controller
     }
     public function updatedatasejarah(request $request, $id)
     {
-        $data = sejarah::find($id);
+        $data = sejarah::findorfail($id);
+        $filename = $data->fotos;
         $data->update([
-
             'sejarah' => $request->sejarah,
         ]);
         if ($request->hasFile('fotos')) {
-            $request->file('fotos')->move('fotosekolah/', $request->file('fotos')->getClientOriginalName());
-            $data->fotos = $request->file('fotos')->getClientOriginalName();
-            $data->save();
+            // hapus file lama jika ada
+            if ($data->fotos && file_exists(public_path('fotosekolah/' . $data->fotos))) {
+                unlink(public_path('fotosekolah/' . $data->fotos));
+            }
+
+            $random = $request->file('fotos')->getClientOriginalExtension();
+            $filename = time().'.'.$random;
+            $request->file('fotos')->move('fotosekolah/',$filename);
         }
+        $data->fotos = $filename;
+        $data->save();
+
         return redirect()->route('history')->with('success', 'Data Berhasil Di Update');
     }
 }

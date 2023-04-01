@@ -1,49 +1,54 @@
 @extends('web.face')
 
 @section('content')
-    <section class="inner-intro bg-img light-color overlay-before parallax-background"
-        style="background-image: url('{{ asset('education/theembazaar.com/tf/educate/assets/images/smk1.png') }}')">
-        <div class="container">
-            <div class="row title">
-                <h1 data-title="history"><span>Ekstrakurikuler</span></h1>
-            </div>
-        </div>
-    </section>
+    <x-section title="ekstrakurikuler"></x-section>
 
 
     <section class="latest__block padding ptb-xs-60">
         <div class="container">
-            <div class="row pb-30 text-center">
-                <div class="col-sm-12 mb-20">
-                    <h2>Ekstrakurikuler</h2>
-                    <span class="b-line"></span>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="block-title v-line mb-35 ">
+                        <h2><span>Ekstrakurikuler </span> Sekolah</h2>
+                        <p class="italic"> Ekstrakurikuler SMKN 1 Pasuruan </p>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                @foreach ($data as $row)
-                    <div class="col-md-4 mb-30">
-                        <div class="img-scale">
-                            <figure>
-                                <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt="" style="height: 220px">
-                            </figure>
-                            <div class="latest__block-post">
-                                <div class="meta-post">
+                @if (count($data) > 0)
+                    @foreach ($data as $row)
+                        <div class="col-md-4 mb-30">
+                            <div class="img-scale">
+                                <figure>
+                                    <img src="{{ asset('fotoekskul/' . $row->foto) }}" alt="" style="height: 220px">
+                                </figure>
+                                <div class="latest__block-post">
+                                    <div class="meta-post">
 
-                                </div>
-                                <h3 class="latest__block-title"><a
-                                        href="/detail/{{ $row->id }}">{{ $row->judul }}</a>
-                                </h3>
+                                    </div>
+                                    <h3 class="latest__block-title"><a
+                                            href="/detail/{{ $row->id }}">{{ $row->judul }}</a>
+                                    </h3>
 
-                                <div class="flat-link flat-arrow sm  ">
-                                    <a href="/detail/{{ $row->id }}" class="more_btn__block">Selengkapnya <i
-                                            class="fa fa-angle-right"></i></a>
+                                    <div class="flat-link flat-arrow sm  ">
+                                        <a href="/detail/{{ $row->id }}" class="more_btn__block">Selengkapnya <i
+                                                class="fa fa-angle-right"></i></a>
+                                    </div>
                                 </div>
+
                             </div>
-
                         </div>
+                    @endforeach
+                @else
+                    <div class="row mt-50 text-center">
+                        <i style="margin-bottom: 5px;" class="fa-solid fa-file fa-3x"></i>
+                        <p class="italic">Belum ada Data</p>
                     </div>
-                @endforeach
+                @endif
+
+
             </div>
+            {{ $data->links() }}
         </div>
     </section>
 @endsection

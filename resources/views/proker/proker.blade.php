@@ -7,7 +7,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/proker">Proker</a></li>
+                    <li class="breadcrumb-item active"><a href="/proker">Program Kerja</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -15,7 +15,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Visi Misi</h4>
+                    <h4 class="card-title">Program Kerja</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -24,6 +24,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Foto</th>
                                     <th>Tujuan</th>
                                     <th>Kegiatan</th>
                                     <th>Indikator</th>
@@ -39,13 +40,17 @@
                                 @foreach ($data as $row)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
+                                        <td>
+                                            <img style="width: 200px;
+                                            height:180px;" src="{{ asset('fotoproker/' . $row->foto) }}" alt="">
+                                        </td>
                                         <td>{!! $row->tujuan !!}</td>
                                         <td>{!! $row->kegiatan !!}</td>
                                         <td>{!! $row->indikator !!}</td>
                                         <td>{!! $row->penanggungjk !!}</td>
                                         <td>{{ $row->batas_waktu }}</td>
                                         <td>
-                                            <a href="/tampilproker/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampilproker/{{ $row->id }}" class="btn btn-warning mb-3"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -55,6 +60,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>

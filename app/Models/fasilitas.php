@@ -10,4 +10,5 @@ class fasilitas extends Model
     use HasFactory;
 
     protected $guarded =[];
+
 }

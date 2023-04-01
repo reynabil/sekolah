@@ -26,7 +26,6 @@
                                     <th>#</th>
                                     <th>Foto</th>
                                     <th>Judul</th>
-                                    <th>Foto Detail</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -39,17 +38,14 @@
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>
-                                            <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
-                                                style="width: 40px";>
+                                            <img src="{{ asset('fotoekskul/' . $row->foto) }}" alt=""
+                                                style="width: 200px;
+                                                height: 100px;";>
                                         </td>
                                         <td>{{ $row->judul }}</td>
-                                        <td>
-                                            <img src="{{ asset('fotosekolah/' . $row->fotod) }}" alt=""
-                                                style="width: 40px";>
-                                        </td>
                                         <td>{!! $row->deskripsi !!}</td>
                                         <td>
-                                            <a href="/tampildataekskul/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildataekskul/{{ $row->id }}" class="btn btn-warning mb-3"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -59,6 +55,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>

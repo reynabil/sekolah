@@ -29,83 +29,83 @@
                 <div class="card-body">
                     <form action="/updateproker/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        {{-- <div class="mb-3">
-                            <label for="formFile" class="form-label">Masukkan Foto</label>
-                            <input class="form-control" type="file" name="foto" id="foto"
-                                value="{{ $data->foto }}">
-                            <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->foto) }}" alt=""
-                                style="width: 300px;">
-                        </div> --}}
-                        <div class="mb-3">
-                            <label for="nama" class="form-label">Tujuan</label>
-                            <input type="text" class="form-control" name="tujuan" id="tujuan"
-                                aria-describedby="emailHelp" value="{{ $data->tujuan }}">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input value="{{ $data->foto }}" name="foto" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
+                        </div>
+                        <img class="img mb-3" src="{{ asset('fotoproker/' . $data->foto) }}" alt=""
+                            style="width: 300px;">
+                            
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Tujuan</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="tujuan" class="summernote">{!! $data->tujuan !!}</textarea>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         {{-- @error('visi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror --}}
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Kegiatan
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="misi" id="mytextarea">{!! $data->kegiatan !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Kegiatan</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="kegiatan" class="summernote">{!! $data->kegiatan !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Indikator
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="tujuan" id="mytextarea">{!! $data->indikator !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Indikator</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="indikator" class="summernote">{!! $data->indikator !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Penanggung Jawab Kegiatan
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="komitmen" id="mytextarea">{!! $data->penanggungjk !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Penanggung Jawab</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="penanggungjk" class="summernote">{!! $data->penanggungjk !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Batas Waktu</label>
-                            <input class="form-control" value="{{ $data->batas_waktu }}" type="date" name="batas_waktu"
-                                id="batas_waktu">
+                            <input class="form-control"
+                                value="{{ \Carbon\Carbon::parse($data->batas_waktu)->format('Y-m-d') }}" type="date"
+                                name="batas_waktu" id="batas_waktu">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-3">Simpan
-                        </button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/proker"><button class="btn btn-warning">Kembali</button></a>
                     </form>
-                    <button class="btn btn-warning"><a href="/proker">kembali</a></button>
+
                 </div>
             </div>
         </div>

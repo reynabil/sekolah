@@ -29,7 +29,7 @@ class sejarah extends Seeder
             tanggal 30 Juli 1980 No. 0209/0/1980. Pada Tahun 2000 SMEA Negeri Pasuruan diubah nama menjadi
             SMK Negeri 1 Pasuruan Kelompok Bisnis dan Manajemen dan Kelompok Teknologi.
         </p>',
-        'fotos' => 'voli.jpeg',
+        'fotos' => '1679889948.jpeg',
         ]);
     }
 }

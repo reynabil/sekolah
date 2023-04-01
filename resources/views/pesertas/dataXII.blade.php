@@ -9,7 +9,7 @@
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK & PD</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/peserta">Data Pendidik</a></li>
-                    <li class="breadcrumb-item active"><a href="/peserta">{{ $data->nama_kelas }}</a></li>
+                    <li class="breadcrumb-item active"><a href="#">{{ $data->nama_kelas }}</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -43,7 +43,7 @@
                                         <td>{{ $data->jp }}</td>
                                         <td>{{ $data->jml }}</td>
                                         <td>
-                                            <a href="/tampildatapendidik/{{ $data->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildataXII/{{ $data->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $data->id }}"
                                                 data-nama_dosen="{{ $data->nama_dosen }}"><i
@@ -58,4 +58,27 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script>
+        $('.delete').click(function() {
+            var mahasiswaid = $(this).attr('data-id');
+            var nama = $(this).attr('data-nama_dosen');
+            swal({
+                    title: "Apakah Anda Yakin?",
+                    text: "Kamu Akan Menghapus Data  " + nama + " ",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = "/deleteXII/" + mahasiswaid + ""
+                        swal("Data telah dihapus!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Data Tidak Jadi Dihapus");
+                    }
+                });
+        });
+    </script>
 @endsection

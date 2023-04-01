@@ -29,13 +29,18 @@
                 <div class="card-body">
                     <form action="/updatedatavisi/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Masukkan Foto</label>
-                            <input class="form-control" type="file" name="foto" id="foto"
-                                value="{{ $data->foto }}">
-                            <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->foto) }}" alt=""
-                                style="width: 300px;">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input value="{{ $data->foto }}" name="foto" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
                         </div>
+                        <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->foto) }}" alt=""
+                            style="width: 300px;">
                         <div class="mb-3">
                             <label for="nama" class="form-label">Visi</label>
                             <input type="text" class="form-control" name="visi" id="visi"
@@ -44,63 +49,49 @@
                         @error('visi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Misi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="misi" id="mytextarea">{!! $data->misi !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="misi" class="summernote">{!! $data->misi !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Tujuan
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="tujuan" id="mytextarea">{!! $data->tujuan !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="tujuan" class="summernote">{!! $data->tujuan !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Komitmen
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="komitmen" id="mytextarea">{!! $data->komitmen !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="komitmen" class="summernote">{!! $data->komitmen !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        <button type="submit" class="btn btn-primary mb-3">Simpan
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Simpan
                         </button>
+                        <a href="/visi"><button class="btn btn-warning">Kembali</button></a>
                     </form>
-                    <button class="btn btn-warning"><a href="/visi">kembali</a></button>
                 </div>
             </div>
         </div>

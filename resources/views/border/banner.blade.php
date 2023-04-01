@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Dashboard</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Beranda</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/border">Border</a></li>
                 </ol>
@@ -15,7 +15,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Sambutan Kepala Sekolah</h4>
+                    <h4 class="card-title">Border</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

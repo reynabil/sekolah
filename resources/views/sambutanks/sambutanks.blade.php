@@ -24,7 +24,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Foto</th>
-                                    <th>Judul</th>
                                     <th>Nama</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
@@ -40,9 +39,9 @@
                                         <td>
 
                                             <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
-                                                style="width: 40px";>
+                                                style="width: 200px;
+                                                height:250px;";>
                                         </td>
-                                        <td>{!! $row->judul !!}</td>
                                         <td>{!! $row->nama !!}</td>
                                         <td>{!! $row->deskripsi !!}</td>
                                         <td>

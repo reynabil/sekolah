@@ -1,8 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-
-{{-- sejarah --}}
+    {{-- sejarah --}}
 
     <div class="content-body">
         <div class="container-fluid">
@@ -39,9 +38,8 @@
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>
-
                                             <img src="{{ asset('fotosekolah/' . $row->fotos) }}" alt=""
-                                                style="width: 100px";>
+                                                style="width: 200px";>
                                         </td>
                                         <td>{!! $row->sejarah !!}</td>
                                         <td>
@@ -60,7 +58,7 @@
 
     {{-- perkembangan kompetensi keahlian --}}
 
-    <div class="content-body">
+    <div class="content-body" style="padding-top: 0px;">
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
@@ -84,7 +82,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Tahun</th>
-                                    <th>Judul</th>
+                                    <th>Jangka Tahun</th>
                                     <th>Foto</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
@@ -106,7 +104,7 @@
                                         </td>
                                         <td>{!! $row->deskripsi !!}</td>
                                         <td>
-                                            <a href="/tampildataperkembangan/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildataperkembangan/{{ $row->id }}" class="btn btn-warning mb-3"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -116,6 +114,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $perkembangan->links() }}
                     </div>
                 </div>
             </div>

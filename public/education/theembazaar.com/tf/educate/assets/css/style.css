@@ -130,7 +130,7 @@ a {
 	h2{
 		font-size: 23px;
 	}
-	
+
 h3, .h3 {
     font-size: 20px;
 }
@@ -528,7 +528,7 @@ h3, .h3 {
 	height: 3px;
 	background: #0c1f38;
 	display: block;
-	margin:0 auto;	
+	margin:0 auto;
 }
 .l-left{
 	margin: 0;
@@ -1473,7 +1473,7 @@ form label.error {
 }
 .call-us .phone-nomber i {
 	    font-size: 23px;
-  
+
     margin-right: 12px;
     vertical-align: top;
     margin-top: 0;
@@ -2509,7 +2509,7 @@ nav .btn-text {
 		padding-top: 10px;
 	}
 }
-/*** 
+/***
 
 ====================================================================
 	Single-Blog-Post
@@ -2849,7 +2849,7 @@ nav .btn-text {
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	single-blog-post
@@ -5235,12 +5235,12 @@ h1 {
 	max-width: none;
 }
 .bg-img-1{
-background: url(../images/new_slider02.jpg) 0 0 no-repeat; 
+background: url(../images/new_slider02.jpg) 0 0 no-repeat;
 background-size:cover
 }
 
 .bg-img-2{
-background: url(../images/slider-home-construction-02.jpg) 0 0 no-repeat; 
+background: url(../images/slider-home-construction-02.jpg) 0 0 no-repeat;
 background-size:cover
 }
 /*Gallery*/
@@ -5346,7 +5346,7 @@ background-size:cover
 	width: 100%;
 }
  }
- 
+
 
 /* ----------------------------------------------------------------
  Services
@@ -5452,7 +5452,7 @@ background-size:cover
 }
 .about-section figure{
 	width:100%;
-	margin-bottom:30px;	
+	margin-bottom:30px;
 }
 @media (max-width: 991px){
 .top-space{
@@ -5514,12 +5514,12 @@ background-size:cover
 }
 .container-filter li a.active,
 .container-filter li a:hover {
-	
+
 	background: #daa106;
 }
 .container-filter li a.active:before {
 	width: 100%;
-	
+
 }
 .container-filter li a.active:before{
 	top:-4px;
@@ -5864,8 +5864,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /*-------------------------------------------------------------------------------------------*/
 .fact-counter-wrapper {
 	position: relative;
-	
-	
+
+
 }
 .single-fact {
 	text-align: center;
@@ -5907,7 +5907,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .single-fact .icon-box i:before {
 	font-size: 50px;
-	
+
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -6374,7 +6374,7 @@ background-size: cover;
 	background: url(../images/parallax1.jpg) no-repeat;
 }
 .parallax,
-#overlay_bloc{	
+#overlay_bloc{
 	background-size: cover;
     width: 100%;
     background-attachment: fixed;
@@ -6382,7 +6382,7 @@ background-size: cover;
 }
 .fact-counter-wrapper.bg_img1{
 	background-position: center center !important;
-} 
+}
 .btn-wrap a{
 	margin: 0 10px;
 }
@@ -6417,10 +6417,10 @@ background-size: cover;
 @media (max-width: 991px){
 .pt-130{
 	    padding-top: 0;
-}	
+}
 }
 .testimonial-block__section .quote-left{
-	padding-top: 0; 
+	padding-top: 0;
 }
 .testimonial-block__section .quote-icon i {
     font-size: 30px;
@@ -6458,7 +6458,7 @@ background-size: cover;
 .testimonial-block__section .quote-left {
     padding-top: 26px;
 }
-.nf-carousel-theme.nf-carousel-arrow .owl-controls .owl-prev, 
+.nf-carousel-theme.nf-carousel-arrow .owl-controls .owl-prev,
 .nf-carousel-theme.nf-carousel-arrow .owl-controls .owl-next{
 	top:auto;
 	bottom:-85px;
@@ -6578,7 +6578,7 @@ background-size: cover;
     margin-bottom: 25px;
     z-index: 1;
     position: relative;
-	
+
 }
 #footer-widgets .widget .widget-title {
     margin-bottom: 36px;
@@ -6786,8 +6786,8 @@ background-color: #ffbc13;
 
 	#bottom .bottom-bar-content,
 	#bottom .bottom-bar-menu { width: 100%; display: block; text-align: center; padding: 5px 0; }
-	
-}	
+
+}
 
 /*Progress css*/
 .content-wd650 {
@@ -6960,7 +6960,7 @@ background-color: #ffbc13;
 @media (max-width: 767px){
 .featured-icon-wrap {
 	padding-top: 0;
-}	
+}
 }
 .featured-content-wrap {
 	width: 73%;
@@ -7078,7 +7078,7 @@ background-color: #ffbc13;
 	display:table-cell;
 	padding:30px;
 	    vertical-align: middle;
-	
+
 }
 .abt-block__right{
 	width:40%;
@@ -7095,7 +7095,7 @@ background-color: #ffbc13;
 		width:100%;
 		display:block;
 		padding: 30px;
-	}	
+	}
 }
 .abt-block__bg{
 	background:#000;
@@ -7172,7 +7172,7 @@ background-color: #ffbc13;
 	display:table-cell;
 	padding:30px;
 	    vertical-align: middle;
-	
+
 }
 .mv-block__vision{
 	width:40%;
@@ -7182,7 +7182,7 @@ background-color: #ffbc13;
 		display:block;
 		height:auto;
 	}
-	
+
 	.mv-block__mission,
 	.mv-block__visiont{
 		width:100%;
@@ -7191,7 +7191,7 @@ background-color: #ffbc13;
 	}
 	.row-table{
 		padding: 15px;
-	}	
+	}
 }
 .mv-block__mission h3,
 .mv-block__vision h3{
@@ -7559,7 +7559,7 @@ background-color: #ffbc13;
 .history-box {
 	background: #fff;
 	padding: 20px;
-	min-height: 330px;
+	min-height: 300px;
 	margin-top: 20px;
 	position: relative;
 	transform: translateZ(0);
@@ -9477,7 +9477,7 @@ ul.tags li {
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Team Section
@@ -9615,7 +9615,7 @@ ul.tags li {
 }
 
 .theme_color{
-	color:#0c1f38;	
+	color:#0c1f38;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -10078,7 +10078,7 @@ a.btn.xplus-btn.pricing.active:hover {
 }
 .pricing--features li .h3 {
 	margin: 1px 0 4px;
-	line-height: 37px
+	line-height: 37px;
 }
 .pricing--footer {
 	padding: 30px 0
@@ -10374,7 +10374,7 @@ body .width-100per {
 	display:table-cell;
 	    vertical-align: middle;
 		width:100%;
-	
+
 }
 
 .event__time{
@@ -10420,7 +10420,7 @@ font-weight:bold;
 @media (max-width:991px){
 .plan-content-box.plan-content-box__wight__bg{
 	width:100%;
-}	
+}
 }
 .plan-content-box__wight__bg h3{
 	color:#222;
@@ -10439,7 +10439,7 @@ font-weight:bold;
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Countdown
@@ -10466,9 +10466,9 @@ ul.countdown {
 	padding: 0;
 	display: block;
 	text-align: left;
-	
-	
-	
+
+
+
 }
 ul.countdown li {
 	float:left;
@@ -10483,7 +10483,7 @@ ul.countdown li {
 	ul.countdown li {
 		width: 120px;
 		margin: 0  !important;
-	}		
+	}
 }
 ul.countdown li span {
 	font-size: 45px;
@@ -10539,7 +10539,7 @@ ul.countdown li.seperator {
 	.appointment {
 	right: 50%;
 	margin-right: -566px;
-	} 
+	}
 }
 .appointment .input-sm {
 	font-size: 15px;
@@ -10650,7 +10650,7 @@ ul.countdown li.seperator {
 */
 .course__content_block{
     border: 1px solid #d8d5d5;
-    padding: 20px 30px;	
+    padding: 20px 30px;
 }
 .course_features_point{
 	list-style: none;
@@ -10669,7 +10669,7 @@ ul.countdown li.seperator {
 	float: left;
 	width: 50%;
 	margin-bottom: 5px;
-	
+
 }
 @media (max-width:767px){
 .course_features_point li{

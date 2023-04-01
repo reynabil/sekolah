@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Dashboard</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Beranda</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/slider">Slider</a></li>
                 </ol>
@@ -40,15 +40,15 @@
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>
                                             <img src="{{ asset('banner/' . $row->slider1) }}" alt=""
-                                                style="width: 200px; height:100px;" >
+                                                style="width: 250px; height:150px;" >
                                         </td>
                                         <td>
                                             <img src="{{ asset('banner/' . $row->slider2) }}" alt=""
-                                                style="width: 200px; height:100px;" >
+                                                style="width: 250px; height:150px;" >
                                         </td>
                                         <td>
                                             <img src="{{ asset('banner/' . $row->slider3) }}" alt=""
-                                                style="width: 200px; height:100px;">
+                                                style="width: 250px; height:150px;">
                                         </td>
                                         <td>
                                             <a href="/tampilslider/{{ $row->id }}" class="btn  btn-warning"><i

@@ -14,12 +14,6 @@
                         <h4>smk1pasuruan@yahoo.com <span>Admin SMKN 1 Pasuruan, 8am-7pm</span></h4>
                     </div>
                 </div>
-                {{-- <div class="col-sm-4">
-                    <div class="single_info__block">
-                        <i class="fa fa-bullhorn"></i>x
-                        <h4>Request a quote <span>Get all the information</span></h4>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -40,13 +34,17 @@
                     <div class="footer_box__block">
                         <h4>Media Sosial Kita</h4>
                         <ul>
-                            <li><i class="fab fa-facebook"></i><a style="margin-left: 5px" href="https://web.facebook.com/skensapas">Facebook</a>
+                            <li><i class="fab fa-facebook"></i><a style="margin-left: 5px"
+                                    href="https://web.facebook.com/skensapas">Facebook</a>
                             </li>
-                            <li><i class="fab fa-twitter"></i><a style="margin-left: 5px" href="https://twitter.com/smkn1pasuruan">Twitter</a>
+                            <li><i class="fab fa-twitter"></i><a style="margin-left: 5px"
+                                    href="https://twitter.com/smkn1pasuruan">Twitter</a>
                             </li>
-                            <li><i class="fa-brands fa-square-instagram"></i><a style="margin-left: 5px" href="https://www.instagram.com/smknegeri1pasuruan/">Instagram</a>
+                            <li><i class="fa-brands fa-square-instagram"></i><a style="margin-left: 5px"
+                                    href="https://www.instagram.com/smknegeri1pasuruan/">Instagram</a>
                             </li>
-                            <li><i class="fab fa-youtube"></i><a style="margin-left: 5px" href="https://www.youtube.com/@osis-mpkskensa4022">Youtube</a>
+                            <li><i class="fab fa-youtube"></i><a style="margin-left: 5px"
+                                    href="https://www.youtube.com/@osis-mpkskensa4022">Youtube</a>
                             </li>
                         </ul>
                     </div>
@@ -89,5 +87,4 @@
             </div>
         </div>
     </div>
-
 </footer>

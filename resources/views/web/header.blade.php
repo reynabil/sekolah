@@ -1,5 +1,5 @@
 <header class="header__block">
-    <div class="top-part__block ptb-15">
+    <div class="top-part__block ptb-15" style="background-color: #0c1f38">
         <div class="container">
             <div class="row">
                 <div class="col-sm-7">
@@ -9,9 +9,6 @@
                     <div class="social-link__block text-right">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
@@ -24,7 +21,7 @@
                     <div class="logo">
                         <a href="#">
                             <img width="50"
-                                src="{{ asset('education/theembazaar.com/tf/educate/assets/images/logo.png') }}" style="width: 180px"
+                                src="{{ asset('education/theembazaar.com/tf/educate/assets/images/logo.png') }}" style="width: 150px"
                                 alt="Logo">
                             <img width="100"src="{{ asset('education/theembazaar.com/tf/educate/assets/images/.png') }}"
                                 alt="">

@@ -5,9 +5,9 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Beranda</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/ekskul">Ektrakurikuler</a></li>
+                    <li class="breadcrumb-item active"><a href="/news">Berita</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -15,7 +15,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Ekstrakurikuler</h4>
+                    <h4 class="card-title">Berita Seputar Sekolah</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -26,6 +26,7 @@
                                     <th>#</th>
                                     <th>Foto</th>
                                     <th>Judul</th>
+                                    <th>Dibuat</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -38,14 +39,17 @@
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>
-                                            <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
-                                                style="width: 100px";>
+                                            <div>
+                                                <img src="{{ asset('fotoberita/' . $row->foto) }}" alt=""
+                                                    style="width: 100px";>
+                                            </div>
+
                                         </td>
                                         <td>{{ $row->judul }}</td>
                                         <td>{{ $row->created_at }}</td>
                                         <td>{!! $row->deskripsi !!}</td>
                                         <td>
-                                            <a href="/tampildata/{{ $row->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildata/{{ $row->id }}" class="btn btn-warning mb-3"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -53,8 +57,10 @@
                                         </td>
                                     </tr>
                                 @endforeach
+
                             </tbody>
                         </table>
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>

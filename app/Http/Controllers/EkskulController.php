@@ -11,13 +11,13 @@ class EkskulController extends Controller
 {
     public function ekskul()
     {
-        $data = ekskul::all();
+        $data = ekskul::paginate(3);
         return view('ekskul.ekskul', compact('data'));
     }
     public function ekstra()
     {
         $berita = berita::all();
-        $data = ekskul::all();
+        $data = ekskul::paginate(61);
         return view('ekskul.ekstra', compact('data','berita'));
     }
     public function detail($id)
@@ -35,66 +35,69 @@ class EkskulController extends Controller
     public function insertdataekskul(Request $request)
     {
         $this->validate($request, [
-            'foto' => 'required',
+            'foto' => 'required|image|mimes:png,jpg,jpeg',
             'judul' => 'required',
-            'fotod' => 'required',
             'deskripsi' => 'required',
         ], [
             'foto.required' => 'Harus Diisi',
+            'foto.image' => 'Harus Berupa Gambar',
+            'foto.mimes' => 'Harus Berupa Extensi JPG,PNG,JPEG',
             'judul.required' => 'Harus Diisi',
-            'fotod.required' => 'Harus Diisi',
             'deskripsi.required' => 'Harus Diisi',
         ]);
         $data = ekskul::create([
             'foto' => $request->foto,
             'judul' => $request->judul,
-            'fotod' => $request->fotod,
             'deskripsi' => $request->deskripsi,
         ]);
         if ($request->hasFile('foto')) {
-            $request->file('foto')->move('fotosekolah/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
+            $random = $request->file('foto')->getClientOriginalExtension();
+            $filename = time().'.'.$random;
+            $request->file('foto')->move('fotoekskul/',$filename);
+            $data->foto = $filename;
             $data->save();
         }
-        if ($request->hasFile('fotod')) {
-            $request->file('fotod')->move('fotosekolah/', $request->file('fotod')->getClientOriginalName());
-            $data->fotod = $request->file('fotod')->getClientOriginalName();
-            $data->save();
-        }
-        return redirect()->route('ekskul')->with('success', 'Data Berhasil Di Tambahkan');
+        return redirect()->route('ekskul')->with('success', 'Ekstrakurikuler Berhasil Di Tambahkan');
     }
     public function tampildataekskul($id)
     {
 
-        $data = ekskul::find($id);
+        $data = ekskul::findorfail($id);
         return view('ekskul.tampildata', compact('data'));
     }
     public function updatedataekskul(request $request, $id)
     {
-        $data = ekskul::find($id);
+        $data = ekskul::findorfail($id);
+        $filename = $data->foto;
         $data->update([
 
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
         ]);
         if ($request->hasFile('foto')) {
-            $request->file('foto')->move('fotosekolah/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
+            // hapus file lama jika ada
+            if ($data->foto && file_exists(public_path('fotoekskul/' . $data->foto))) {
+                unlink(public_path('fotoekskul/' . $data->foto));
+            }
+
+            $random = $request->file('foto')->getClientOriginalExtension();
+            $filename = time().'.'.$random;
+            $request->file('foto')->move('fotoekskul/',$filename);
         }
-        if ($request->hasFile('fotod')) {
-            $request->file('fotod')->move('fotosekolah/', $request->file('fotod')->getClientOriginalName());
-            $data->fotod = $request->file('fotod')->getClientOriginalName();
-            $data->save();
-        }
-        return redirect()->route('ekskul')->with('success', 'Data Berhasil Di Update');
+
+        $data->foto = $filename;
+        $data->save();
+        return redirect()->route('ekskul')->with('success', 'Ekstrakurikuler Berhasil Di Update');
     }
     public function deleteekskul($id)
     {
 
         $data = ekskul::findorfail($id);
+        if (file_exists(public_path('fotoekskul/'.$data->foto))) {
+            unlink(public_path('fotoekskul/'.$data->foto));
+        }
         $data->delete();
-        return back()->with('info', 'Data berhasil dihapus');
+        return back()->with('success', 'Ekstrakurikuler berhasil dihapus');
 
 
         // $data = admin::find($id);

@@ -16,9 +16,8 @@ class sambutanks extends Seeder
     public function run()
     {
         DB::table('sambutanks')->insert([
-            'judul' => 'Sambutan Kepala Sekolah',
             'nama' => 'Drs. Akh Sigit Suyani, S.ST, M.T',
-            'foto' => 'kepsek.jpg',
+            'foto' => '1679884488.png',
             'deskripsi' => ' <p>
             Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa yang telah memberikan rahmat dan
             anugerahNya sehingga website SMK Negeri 1 Pasuruan ini dapat terbit untuk menjawab akan

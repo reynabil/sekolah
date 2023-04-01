@@ -7,7 +7,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="#">identitas</a></li>
+                    <li class="breadcrumb-item active"><a href="identitas">identitas</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -38,7 +38,7 @@
                                         <td>
 
                                             <img src="{{ asset('fotosekolah/' . $row->fotos) }}" alt=""
-                                                style="width: 100px";>
+                                                style="width: 300px";>
                                         <td>{!! $row->bait1 !!}</td>
                                         <td>
                                             <a href="/tampildataidentitas/{{ $row->id }}" class="btn btn-warning"><i

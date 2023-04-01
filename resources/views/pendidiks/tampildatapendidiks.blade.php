@@ -9,7 +9,7 @@
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK
                             & PD</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/pesertas">Data Peserta Didik</a></li>
+                    <li class="breadcrumb-item active"><a href="/pesertas">Data Pendidik</a></li>
                     <li class="breadcrumb-item active"><a href="">Edit Data </a></li>
                 </ol>
             </div>
@@ -68,7 +68,8 @@
                         @enderror
 
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/pendidik"><button class="btn btn-warning">Kembali</button></a>
                     </form>
                 </div>
             </div>

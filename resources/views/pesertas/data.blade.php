@@ -42,7 +42,7 @@
                                         <td>{{ $data1->jp }}</td>
                                         <td>{{ $data1->jml }}</td>
                                         <td>
-                                            <a href="/tampildatapendidik/{{ $data1->id }}" class="btn btn-warning"><i
+                                            <a href="/tampildatapeserta/{{ $data1->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $data1->id }}"
                                                 data-nama_dosen="{{ $data1->nama_dosen }}"><i
@@ -70,7 +70,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/deletependidik/" + mahasiswaid + ""
+                        window.location = "/deletepeserta/" + mahasiswaid + ""
                         swal("Data telah dihapus!", {
                             icon: "success",
                         });

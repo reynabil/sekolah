@@ -16,17 +16,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-9 mb-30">
-                    <div class="course__details_block">
+                    <div style="margin-bottom: 50px" class="course__details_block">
                         <div class="course__figure_img">
-                            <img src="{{ asset('fotosekolah/' . $each->foto) }}" alt="" style="";>
+                            <img style="width: 800px;
+                            height: 450px;"
+                                src="{{ asset('fotoberita/' . $each->foto) }}" alt="" style="";>
                         </div>
                         <div class="course__text_details mt-40">
                             <h1 class="mb-20">{{ $each->judul }}</h1>
+
+
+                                <div>
+                                    <p class="italic"> <i class="fa-solid fa-user"></i>&nbsp; {{ $each->views }}
+                                        &nbsp;Pembaca &nbsp; <i class="fa-solid fa-clock"></i>{{ $each->created_at }}</p>
+                                    <p></p>
+                                </div>
+
+
                             <p>{!! $each->deskripsi !!}</p>
                         </div>
                     </div>
 
+
+
+
                 </div>
+
                 <!--Sidebar-->
 
                 <div class="col-sm-3 mt-sm-60">
@@ -34,7 +49,8 @@
                         <h4>Berita lainnya</h4>
                         @foreach ($data->take(6) as $row)
                             <ul class="categories">
-                                <li><a href="/selengkapnya/{{ $row->id }}"><i class="fa fa-chevron-right"></i>{{ $row->judul }}</a></li>
+                                <li><a href="/selengkapnya/{{ $row->id }}"><i
+                                            class="fa fa-chevron-right"></i>{{ $row->judul }}</a></li>
                         @endforeach
                     </div>
                 </div>

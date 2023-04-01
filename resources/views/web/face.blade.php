@@ -10,14 +10,15 @@
     <title>SMKN 1 PASURUAN</title>
     <!-- Favicone Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-                integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-                crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('education/theembazaar.com/tf/educate/assets/images/logosmk.ico') }}">
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('ellipsis.css') }}">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="{{ asset('education/theembazaar.com/tf/educate/assets/images/logosmk.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800%7CLato:300,400,700" rel="stylesheet"
         type="text/css">
     <link href="{{ asset('education/theembazaar.com/tf/educate/assets/css/bootstrap.css') }}" rel="stylesheet"
-        type="text/css">
-    <link href="{{ asset('nabil.css') }}" rel="stylesheet"
         type="text/css">
     <link href="{{ asset('education/theembazaar.com/tf/educate/assets/css/font-awesome.css') }}" rel="stylesheet"
         type="text/css">
@@ -77,11 +78,151 @@
     <!--loader-->
     <!--Header Section Start Here
   ==================================-->
-   @include('web.header')
+
+    <header class="header__block">
+        <div class="top-part__block ptb-15" style="background-color: #0c1f38">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <p>SELAMAT DATANG!</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="social-link__block text-right">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="middel-part__block ptb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="{{ asset('fotosekolah/logo.png') }}" style="width: 130px" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="top-info__block text-right">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    <p>SMKN 1 PASURUAN<span>Jl. Veteran, Bugul Lor, Kec. Panggungrejo, Kota Pasuruan,
+                                            Jawa Timur 67122</span></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <p>Admin<span>(0343) 421380</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navgation__block stricky-header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="nabil">
+                        <div class="main-menu__block" style="">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand visible-xs" href="#">
+                                    <img src="{{ asset('education/theembazaar.com/tf/educate/assets/images/logo.png') }}"
+                                        alt="">
+                                </a>
+                            </div>
+
 
                             <!--===Navigation===-->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul {{-- style="width: 1150px;" --}} class="nav navbar-nav mobile-menu">
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="/home">Beranda</a> <span
+                                            class="submenu-button"></span>
+                                    </li>
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="#">Profil</a> <span
+                                            class="submenu-button"></span>
+                                        <ul class="dropdown-menu">
+                                            <li> <a href="/sambutan">Sambutan Kepala Sekolah</a> </li>
+                                            <li> <a href="/visim">Visi Misi</a> </li>
+                                            <li> <a href="/fase">Fasilitas</a> </li>
+                                            <li> <a href="/program">Program Kerja</a> </li>
+                                            <li> <a href="/ekstra">Ekstrakurikuler</a> </li>
+                                            <li> <a href="/identity">Identitas Sekolah</a> </li>
+                                            <li> <a href="/sejarah">Sejarah SMK</a> </li>
+                                            <li> <a href="/kompetensikeahlian">Kompetensi Keahlian</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="javascript:avoid(0);">Data PTK & PD</a>
+                                        <span class="submenu-button"></span>
+                                        <ul class="dropdown-menu">
+                                            <li> <a href="/murid">Data Peserta Didik</a></li>
+                                            <li> <a href="/teacher">Data Pendidik</a> </li>
+                                            <li> <a href="/nonpendidik">Data Tenaga Non Pendidik</a> </li>
 
-@include('web.navigation')
+                                        </ul>
+                                    </li>
+
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="javascript:avoid(0);">Bahan Ajar</a> <span
+                                            class="submenu-button"></span>
+                                        <ul class="dropdown-menu">
+                                            <li> <a href="/ajarx">Bahan Ajar Kelas X</a> </li>
+                                            <li> <a href="/ajarxi">Bahan Ajar Kelas XI</a> </li>
+                                            <li> <a href="/ajarxii">Bahan Ajar Kelas XII</a> </li>
+                                            <li> <a href="/ajarxiiika">Bahan Ajar Kelas XIII KA</a> </li>
+                                            <li> <a href="http://elearning.smkn1pasuruan.com/login">E-Learning</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="javascript:avoid(0);">Agenda Kegiatan</a> <span
+                                            class="submenu-button"></span>
+                                        <ul class="dropdown-menu">
+                                            <li> <a href="/kegiatanppdb">Kegiatan PPDB</a> </li>
+                                            <li> <a href="/keagamaan">Kegiatan Keagamaan</a> </li>
+                                            <li> <a href="/phbn">Kegiatan Sekolah dan PHBN</a> </li>
+                                            <li> <a href="/kelulusan">Info Kelulusan</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="javascript:avoid(0);">Seputar Sekolah</a> <span
+                                            class="submenu-button"></span>
+                                        <ul class="dropdown-menu">
+                                            <li> <a href="/berita">Berita</a> </li>
+                                            <li> <a href="/artikel">Artikel</a> </li>
+                                            <li> <a href="/gallery">Galeri</a> </li>
+                                            <li> <a href="/alumni">Profil Alumni</a> </li>
+                                            <li> <a
+                                                    href="/tambah">Form
+                                                    Pendataan Alumni</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a {{-- style="padding-right: 0px; padding-left: 0px;" --}} href="#!">BKK</a> <span
+                                            class="submenu-button"></span>
+                                        <!-- Nav Dropdown -->
+                                        <ul class="dropdown-menu" style="width: auto;">
+                                            <li> <a href="/visimisibkk">Visi Dan Misi</a> </li>
+                                            <li> <a href="/strukturorganisasibkk">Struktur Organisasi BKK</a> </li>
+                                            <li> <a href="/sasaranmutu">Sasaran Mutu</a> </li>
+                                            <li> <a href="/infolowongankerja">Informasi Lowongan Kerja</a> </li>
+                                            <li> <a href="/pengumumanbkk">Pengumuman Penerimaan Kerja</a> </li>
+                                            <li> <a href="/kegiatanbkk">Kegiatan BKK</a> </li>
+                                        </ul>
+                                        <!-- End Nav Dropdown -->
+                                    </li>
+                                    <li><a class="custom_btn__block" href="/contact">kontak kami</a></li>
+                                </ul>
+
+                            </div>
+
 
                         </div>
                     </div>
@@ -89,6 +230,8 @@
             </div>
         </div>
     </header>
+
+
     <!--Header End Here-->
     <!--  Main Banner Start Here-->
     {{--  --}}
@@ -155,8 +298,12 @@
     <script type="text/javascript"
         src="{{ asset('education/theembazaar.com/tf/educate/assets/js/jquery.revolution.js') }}"></script>
     <!-- custom Js -->
+    <script src="{{ asset('education/theembazaar.com/tf/educate/assets/js/jquery.accordion.js') }}" type="text/javascript">
+    </script>
     <script src="{{ asset('education/theembazaar.com/tf/educate/assets/js/custom.js') }}" type="text/javascript"></script>
     <script src="{{ asset('education/theembazaar.com/hosting_popup/js/hots_popup.js') }}"></script>
+
+
 </body>
 
 <!-- Mirrored from theembazaar.com/tf/educate/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 04:49:39 GMT -->

@@ -8,7 +8,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/visi">Program Kerja</a></li>
+                    <li class="breadcrumb-item active"><a href="/proker">Program Kerja</a></li>
                     <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
                 </ol>
             </div>
@@ -31,69 +31,72 @@
                 <div class="card-body">
                     <form action="/insertproker" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="mb-3">
-                            <label for="floatingTextarea2">Tujuan</label>
-                            <textarea class="form-control" id="tujuan" name="tujuan" style="height: 100px"></textarea>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input name="foto" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Tujuan</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="tujuan" class="summernote"></textarea>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
-                        <section style="padding-top:60px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Kegiatan
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="kegiatan" id="mytextarea"></textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Kegiatan</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="kegiatan" class="summernote"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
 
-                        <section style="padding-top:60px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Indikator
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="indikator" id="mytextarea"></textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Indikator</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="indikator" class="summernote"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
 
 
 
-                        <section style="padding-top:60px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Komitmen
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="penanggungjk" id="mytextarea"></textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Penanggung Jawab</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="penanggungjk" class="summernote"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Batas Waktu</label>

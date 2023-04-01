@@ -16,10 +16,8 @@ return new class extends Migration
         Schema::create('tenagas', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
-            $table->string('nip');
             $table->string('nama');
-            $table->string('status');
-            $table->date('tmt');
+            $table->string('status_kepegawaian');
             $table->timestamps();
         });
     }

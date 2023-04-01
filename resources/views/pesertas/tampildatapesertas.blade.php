@@ -10,7 +10,7 @@
                             & PD</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/pesertas">Data Peserta Didik</a></li>
-                    <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
+                    <li class="breadcrumb-item active"><a href="">Edit data </a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -42,26 +42,27 @@
                         @enderror
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                <h5>Nama</h5>
+                                <h5>jumlah laki</h5>
                             </label>
-                            <input type="text" name="nama_kelas" value="{{ $data->jl }}" class="form-control" id="exampleInputEmail1"
+                            <input type="text" name="jl" value="{{ $data->jl }}" class="form-control" id="jl"
                                 aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                <h5>Nama</h5>
+                                <h5>jumlah</h5>
                             </label>
-                            <input type="text" name="nama_kelas" value="{{ $data->jp }}" class="form-control" id="exampleInputEmail1"
+                            <input type="text" name="jp" value="{{ $data->jp }}" class="form-control" id="jp"
                                 aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                <h5>Nama</h5>
+                                <h5>jumlah</h5>
                             </label>
-                            <input type="text" name="nama_kelas" value="{{ $data->jp }}" class="form-control" id="exampleInputEmail1"
+                            <input type="text" name="jml" value="{{ $data->jml }}" class="form-control" id="jml"
                                 aria-describedby="emailHelp">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/peserta"><button class="btn btn-warning">Kembali</button></a>
                     </form>
                 </div>
             </div>

@@ -31,7 +31,7 @@
                                                     <h4 class="card-title">{{ $item->nama_kelas }}</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <img src="{{ asset('fotosekolah/' . $item->foto) }}" alt=""
+                                                    <img src="{{ asset('logo/' . $item->foto) }}" alt=""
                                                         style="width: 50px">
                                                 </div>
                                             </a>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatapeserta" class="btn btn-success mb-5">Tambah Kelas</a>
+                            <a href="/tambahdataXI" class="btn btn-success mb-5">Tambah Kelas</a>
                             <div class="row">
                                 @foreach ($data1 as $row)
                                     <div class="col-xl-3 col-xxl-3 col-sm-6">
@@ -60,7 +60,7 @@
                                                     <h4 class="card-title">{{ $row->nama_kelas }}</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
+                                                    <img src="{{ asset('logo/' . $row->foto) }}" alt=""
                                                         style="width: 50px">
                                                 </div>
                                             </a>
@@ -79,7 +79,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatapeserta" class="btn btn-success mb-5">Tambah Kelas</a>
+                            <a href="/tambahdataXII" class="btn btn-success mb-5">Tambah Kelas</a>
                             <div class="row">
                                 @foreach ($data2 as $row)
                                     <div class="col-xl-3 col-xxl-3 col-sm-6">
@@ -89,7 +89,36 @@
                                                     <h4 class="card-title">{{ $row->nama_kelas }}</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
+                                                    <img src="{{ asset('logo/' . $row->foto) }}" alt=""
+                                                        style="width: 50px">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Data Peserta didik Kelas XIII</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-responsive-sm">
+                            <a href="/tambahdataXIII" class="btn btn-success mb-5">Tambah Kelas</a>
+                            <div class="row">
+                                @foreach ($data3 as $row)
+                                    <div class="col-xl-3 col-xxl-3 col-sm-6">
+                                        <div class="card overflow-hidden">
+                                            <a href="/dataXIII/{{ $row->id }}">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">{{ $row->nama_kelas }}</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <img src="{{ asset('logo/' . $row->foto) }}" alt=""
                                                         style="width: 50px">
                                                 </div>
                                             </a>
@@ -103,9 +132,10 @@
             </div>
         </div>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
         integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
-
 
     <script src="{{ asset('template/nabil/xhtml/vendor/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('template/nabil/xhtml/js/plugins-init/sparkline-init.js') }}"></script>

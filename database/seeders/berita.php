@@ -20,6 +20,7 @@ class berita extends Seeder
             'created_at' => '2023-01-30 13:00:00',
             'judul' => 'HASIL LOMBA KOMPETENSI SISWA SMK WILAYAH KERJA 2',
             'deskripsi' => 'Kegiatan Lomba Kompetensi Siswa (LKS) dilaksanakan pada tanggal 24-26 Januari 2022 yang diikuti oleh siswa SMK Wilayah Kerja (Wilker) II yang dilaksanakan di Kabupaten Situbondo, Bondowoso, Banyuwangi, dan Jember. Kepala Dinas Pendidikan Jawa Timur, Dr. Ir. Wahid Wahyudi, MT di SMKN 1 Panji Situbondo ikut serta membuka kegitan LKS Wilker II Tahun 2022. Perwakilan beberapa siswa terbaik dari SMKN 1 Pasuruan berpartisipasi untuk mengikuti Lomba Kompetensi Siswa Tahun 2022. Diantaranya siswa bernama M. Khoirul Anwar dari Kelas XII Multimedia I meraih peringkat I dalam bidang Teknik Perancangan Model 3D), Orchid Rikihama A.M. dari Kelas XII Kimia Industri meraih peringkat II dalam bidang Chemistry, Masyuan Novila R. dari Kelas XII Bisnis Daring dan Pemasaran meraih peringkat II dalam bidang bidang Marketing Online, Rahdita Septiani dari Kelas XII Mutimeda I meraih peringkat IV dalam bidang Graphic Design Technology, dan Arzaqul Mughni dari Kelas XII Teknik Komputer & Jaringan II meraih peringkat V dalam bidang IT Network System Administration. Dari hasil Lomba Kompetensi Siswa Wilker II Tahun 2022, kelima bidang tersebut berhasil melanjutkan ke tingkat Provinsi Jawa Timur.',
+            'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'kompetensi.jpg',
@@ -42,6 +43,7 @@ Waktu yang diberikan oleh panitia adalah 16 jam pengerjaan yang dibagi menjadi 3
 Di hari terakhir tidak banyak yang saya lakukan, hanya melakukan beberapa perubahan kecil pada karakter dan menambahkan detail pada texture. Setelah selesai waktu pengerjaan, saya menunggu pengumuman juara. Awalnya saya tidak yakin untuk mendapat juara, ternyata nama SMKN 1 Pasuruan masuk ke dalam nominasi 3 besar. Alhamdulillah perjuangan saya selama 4 bulan membuahkan hasil walaupun mendapat juara 3, saya tetap bangga bisa membawa nama SMK ke tingkat provinsi.”
 
 Benar-benar suatu prestasi yang dapat mengharumkan nama SMKN 1 Pasuruan. Semoga untuk ajang LKS kedepannya SMKN 1 Pasuruan dapat mempertahankan dan meningkatkan prestasi untuk kategori yang lebih bervariasi. Selain itu, semoga siswa-siswi unggulan dapat membawa nama SMKN 1 Pasuruan ke kancah nasional.',
+'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'pppk.jpg',
@@ -70,6 +72,7 @@ Benar-benar suatu prestasi yang dapat mengharumkan nama SMKN 1 Pasuruan. Semoga 
             Semoga sukses!
 
             ~ Jurnalis Rakhma Oktaviolina ~',
+            'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'ict.jpg',
@@ -80,6 +83,7 @@ Benar-benar suatu prestasi yang dapat mengharumkan nama SMKN 1 Pasuruan. Semoga 
             Acara yang diselenggarakan tersebut dihadiri siswa siswi smk se-Jawa timur dengan pameran stand. Tim dari SMKN 1 Pasuruan mengusung tema yang berjudul “SKENSA DIGIMAGZ” atau SMKN 1 Pasuruan Digital Magazine.
 
             Salah satu karya menarik dari siswa SMKN 1 Pasuruan berupa karikatur bergambar Ibu Khofifah yang merupakan karya dari siswa – siswi jurusan multimedia. Hasil karya tersebut mendapatkan apresiasi positif secara langsung oleh Ibu Khofifah selaku Gubernur Jawa Timur.',
+            'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'perpus.jpg',
@@ -93,6 +97,7 @@ Benar-benar suatu prestasi yang dapat mengharumkan nama SMKN 1 Pasuruan. Semoga 
             Perpustakaan tidak hanya menyediakan koleksi bahan bacaan sebagai pusat ilmu pengetahuan, tapi juga menjadi wadah yang berkontribusi menyejahterakan dan rekreasi. Perpustakaan Skensa menyediakan ruang baca yang nyaman dan menarik. Dilengkapi beberapa pendingin ruangan dan spot baca unik, seperti rumah pohon, obyek interior pesawat, andong, becak, dan bemo diharapkan pengunjung perpustakaan Skensa lebih menikmati berkegiatan di sini.
 
             Harapan ke depan, Perpustakaan Skensa semakin menjadi pionir dalam segala kreativitas civitas SMKN 1 Pasuruan. Selamat berlomba.',
+            'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'quinclong.jpg',
@@ -100,12 +105,14 @@ Benar-benar suatu prestasi yang dapat mengharumkan nama SMKN 1 Pasuruan. Semoga 
             'judul' => 'SMKN1 PASURUAN PRODUKSI HANDSANITIZER “QUINCLONG”            "
             ',
             'deskripsi' => 'Pasuruan, 12 April 2020. Teaching factory (tefa) SMKN 1 Pasuruan memproduksi handsanitizer. Produk tersebut diproduksi sebagai jawaban atas tingginya kebutuhan masyarakat akan handsanitizer di tengah pandemi corona. Produk ini merupakan produk terbaru tefa SMKN 1 yang dikemas dalam botol semprot berukuran 30ml serta jeriken kecil berukuran 1l. Sama seperti produk tefa yang lain, produk ini juga menggunakan merk dagang “Quinclong”. Rencananya produk handsanitizer ini tidak hanya akan dijual di Bussiness Center SMKN 1 tetapi juga akan dibagikan gratis kepada pihak-pihak yang membutuhkan.',
+            'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'corona.jpg',
             'created_at' => '2023-01-30 13:00:00',
             'judul' => 'AKSI PEDULI WARGA TERDAMPAK PANDEMI CORONA',
             'deskripsi' => 'Pasuruan, 16 April 2020. SMKN 1 Pasuruan melaksanakan aksi peduli warga terdampak pandemi corona. Aksi ini dilakukan dengan cara membagikan paket sembako, masker, dan handsanitizer kepada pihak-pihak yang membutuhkan. Paket Sembako dan masker dibagikan pada warga terdampak corona. Sedangkan handsanitizer dibagikan kepada pos-pos penanganan dan pengamanan covid 19 yang tersebar di Kota Pasuruan. Handsanitizer tersebut merupakan produk teaching factory (tefa) SMKN 1 Pasuruan yang diproduksi oleh guru dan siswa bidang keahlian kimia.',
+            'views' => '0',
         ]);
         DB::table('beritas')->insert([
             'foto' => 'peringatan.jpg',
@@ -120,6 +127,7 @@ Benar-benar suatu prestasi yang dapat mengharumkan nama SMKN 1 Pasuruan. Semoga 
             Dalam sambutannya Kepala SMK Negeri 1 Pasuruan Bapak Achmad Sarkawi menyatakan bahwa ia berharap melalui peringatan ini siswa dapat lebih menghormati dan menghargai jasa bapak ibu guru yang telah mengajar mereka dengan ikhlas. Beliau menambahkan bahwa hal itu dapat ditunjukkan dengan usaha mereka untuk memperbaiki sikap agar lebih santun saat berhadapan dengan guru.
 
             Acara peringatan hari guru ini ditutup dengan pemotongan tumpeng yang dilakukan oleh Bapak Sarkawi dan ketua PGRI SMK Negeri 1 Pasuruan, Bapak Kukuh Santoso. Dalam kesempatan itu juga diadakan pemilihan ketua PGRI SMK Negeri 1 Pasuruan untuk kepengurusan yang baru, yang menghasilkan keputusan memilih Bapak Muklas sebagai ketua.',
+            'views' => '0',
         ]);
     }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('fasilitas', function (Blueprint $table) {
             $table->id();
             $table->string('icon');
+            $table->string('foto');
             $table->string('nama_ruang');
             $table->bigInteger('jumlah');
             $table->timestamps();

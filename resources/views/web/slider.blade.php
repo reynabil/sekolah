@@ -45,8 +45,8 @@
                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
                         data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
                         <div class="banner-text"> <span class="sub-text"></span>
-                            <h2>Prestasi<span> Siswa</span> SMKN <span> 1</span></h2>
-                            <p> Siswa Berprestasi DI SMKN 1 Kota </p>
+                            <h2>Prestasi<span> Siswa</span> SMKN <span> 1 </span>Kota Pasuruan</h2>
+                            <p> Siswa Berprestasi DI SMKN 1 Kota Pasuruan   </p>
                             <a class="btn-text" href="#"> Selengkapnya</a>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                 Keuangan Lembaga(AKL),
                                 Otomatisasi dan Tata Kelola Perkantoran(OTKP).
                             </p>
-                            <a class="btn-text" href="about_us.html">Selengkapnya</a>
+                            <a class="btn-text" href="/kompetensikeahlian">Selengkapnya</a>
                         </div>
                     </div>
                 </li>

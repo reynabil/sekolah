@@ -1,49 +1,62 @@
 @extends('web.face')
 
 @section('content')
-    <section class="inner-intro bg-img light-color overlay-before parallax-background"
-        style="background-image: url('{{ asset('education/theembazaar.com/tf/educate/assets/images/testsmk2.jpg') }}')">
-        <div class="container">
-            <div class="row title">
-                <h1 data-title="history"><span>Berita Seputar Sekolah</span></h1>
-            </div>
-        </div>
-    </section>
+    <x-section1 title="Berita Seputar sekolah"></x-section1>
     <section class="course-section__block padding ptb-xs-60">
         <div class="container">
-            <div class="row pb-30">
-                <div class="col-sm-6 mb-20">
-                    <h2>Berita Seputar Sekolah</h2>
-
-                </div>
-                <div class="col-sm-6 mb-20 text-right text-xs-left">
-                </div>
-            </div>
-
-            <div class="row pb-30">
-                @foreach ($data as $row)
-                    <div class="col-md-3 col-sm-6 mb-30">
-                        <div class="courses-block img-scale">
-                            <figure class="img__block">
-                                <img style="height: 200px" class="img-responsive"
-                                    src="{{ asset('fotosekolah/' . $row->foto) }}" alt="courses">
-                            </figure>
-                            <div class="courses-content__block">
-                                <div class="class_time"> <i
-                                        class="fa fa-clock-o">{{ $row->created_at->format('d-m-y') }}</i></div>
-                                <h4 class="item-title"><a href="#">{{ $row->judul }}</a></h4>
-                                <p class="ellipsis">{{ $row->deskripsi }}
-                                </p>
-                                <a href="/selengkapnya/{{ $row->id }}" class="more_btn__block mt-0">Selengkapnya <i
-                                        class="fa fa-angle-right"></i></a>
-                                <ul class="courses-info">
-                                </ul>
-                            </div>
-                        </div>
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="block-title v-line mb-35">
+                        <h2><span>Berita</span> Seputar Sekolah</h2>
+                        <p class="italic"> Berita Seputar Sekolah SMKN 1 Pasuruan </p>
                     </div>
-                @endforeach
+                </div>
             </div>
 
+            <form method="GET" action="/berita">
+                <input style="height: 40px;
+                margin-left: 5px;" type="text" name="keyword" />
+                <button style="width: 50px;
+                height: 40px;" class="btn btn-warning" type="submit"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+
+            </form>
+
+            <div class="row pb-30">
+                @if (isset($data))
+                    @if (count($data) > 0)
+                        @foreach ($data as $row)
+                            <div class="col-md-3 col-sm-6 mb-30">
+                                <div class="courses-block img-scale">
+                                    <figure class="img__block">
+                                        <img style="height: 200px" class="img-responsive"
+                                            src="{{ asset('fotoberita/' . $row->foto) }}" alt="courses">
+                                    </figure>
+                                    <div class="courses-content__block">
+                                        <div class="class_time"> <i class="fa fa-clock-o">
+                                                {{ $row->created_at }}</i></div>
+                                        <h4 style="height: 70px;" class="item-title"><a href="#">{{ $row->judul }}</a></h4>
+                                        <div class="ellipsis">{!! $row->deskripsi !!}
+                                        </div>
+                                        <a href="/selengkapnya/{{ $row->id }}"
+                                            class="more_btn__block mt-0">Selengkapnya <i class="fa fa-angle-right"></i></a>
+                                        <ul class="courses-info">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
+                    <div class="row mt-80 text-center">
+                        <i style="margin-bottom: 5px;"
+                            class="fa-solid fa-file fa-3x"></i>
+                        <p class="italic">Belum ada Data</p>
+                    </div>
+                    @endif
+
+            </div>
+            {{ $data->links() }}
+            @endif
         </div>
     </section>
 @endsection

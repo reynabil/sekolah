@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\identitas;
 use App\Models\sambutanks;
+use App\Models\User;
 use App\Models\visimisi;
 use Database\Seeders\identitas as SeedersIdentitas;
 use Database\Seeders\sambutanks as SeedersSambutanks;
@@ -23,6 +24,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name' => 'Administrator',
+            'email' => 'Administrator@gmail.com',
+            'password' => Hash::make('smkn1pasuruan'),
+            'role' => 'Admin',
+        ]);
+
+
         $this->call([
             SeedersSambutanks::class,
             SeedersVisimisi::class,
@@ -39,6 +48,30 @@ class DatabaseSeeder extends Seeder
             peserta::class,
             sebelas::class,
             duabelas::class,
+            tigabelas::class,
+            kelasxes::class,
+            tenaga::class,
+            kelasxis::class,
+            tigas::class,
+            empat::class,
+            denah::class,
+            ppdb::class,
+            galeri::class,
+            kegiatan::class,
+            sekolah::class,
+            kelulusan::class,
+            artikel::class,
+            visimisibkk::class,
+            strukturbkk::class,
+            lowongankerja::class,
+            kegiatanbkk::class,
+            pengumuman::class,
+            siswa::class,
+            sasaran::class,
+            sasaranmutu::class,
+            alumni::class,
+            kompetensikeahlian::class,
+            fotohome::class,
 
         ]);
     }

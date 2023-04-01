@@ -37,10 +37,10 @@
                                 @foreach ($data as $row)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
-										
-                                        <td>{{ $row->tanggal }}</td>
+
+                                        <td>{{ $row->tanggal->format('d F Y') }}</td>
                                         <td>{{ $row->kegiatan }}</td>
-                                        <td>{{ $row->keterangan }}</td>
+                                        <td>{!! $row->keterangan !!}</td>
                                         <td>
                                             <a href="/tampildatasekolahs/{{ $row->id }}" class="btn btn-warning"><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
@@ -52,6 +52,7 @@
                                 @endforeach
                                 </tbody>
                         </table>
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>

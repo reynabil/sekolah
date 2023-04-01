@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class kelasx extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
 }

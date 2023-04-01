@@ -5,7 +5,8 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK & PD</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK
+                            & PD</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/tenagas">Data Tenaga Non Pendidik</a></li>
                 </ol>
@@ -20,15 +21,19 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-responsive-sm">
-                            <a href="/tambahdatatenaga" class="btn btn-success mb-5">Tambah Data</a>
+                            <div class="mb-5">
+                                <a href="/tambahdatatenaga" class="btn btn-success mr-3">Tambah Data</a>
+                                <a href="/exportpdfnonpendidik"><button type="button" class="btn btn-rounded btn-warning"><span
+                                    class="btn-icon-left text-warning"><i class="fa fa-download color-warning"></i>
+                                </span>Export PDF</button></a>
+                            </div>
+
                             <thead>
                                 <tr>
                                     <th>#</th>
-									<th>Foto</th>
-                                    <th>NIP</th>
+                                    <th>Foto</th>
                                     <th>Nama</th>
                                     <th>Status</th>
-                                    <th>TMT</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -39,16 +44,15 @@
                                 @foreach ($data as $row)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
-										<td>
-                                            <img src="{{ asset('fotosekolah/' . $row->foto) }}" alt=""
-                                                style="width: 40px";>
-                                        </td>
-                                        <td>{{ $row->nip }}</td>
-                                        <td>{{ $row->nama }}</td>
-                                        <td>{{ $row->status }}</td>
-                                        <td>{{ $row->tmt }}</td>
                                         <td>
-                                            <a href="/tampildatatenaga/{{ $row->id }}" class="btn btn-warning"><i
+                                            <img src="{{ asset('fotononpendidik/' . $row->foto) }}" alt=""
+                                                style="width: 80px;
+                                                height: 100px;";>
+                                        </td>
+                                        <td>{{ $row->nama }}</td>
+                                        <td>{{ $row->status_kepegawaian }}</td>
+                                        <td>
+                                            <a href="/tampildatatenaga/{{ $row->id }}" class="btn btn-warning "><i
                                                     class="fa-sharp fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama_dosen="{{ $row->nama_dosen }}"><i
@@ -56,14 +60,16 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                                </tbody>
+                            </tbody>
                         </table>
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
+        integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
     <script>
         $('.delete').click(function() {
             var mahasiswaid = $(this).attr('data-id');

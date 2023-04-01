@@ -32,6 +32,6 @@ class BorderController extends Controller
             'deskripsi3' => $request->deskripsi3,
         ]);
 
-        return redirect()->route('border')->with('success', 'Data Berhasil Di Update');
+        return redirect()->route('border')->with('success', 'Border Berhasil Di Update');
     }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('foto');
             $table->string('bahanajar');
             $table->string('kelas');
+            $table->text('deskripsi');
             $table->string('link');
             $table->timestamps();
         });

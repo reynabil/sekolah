@@ -1,25 +1,11 @@
 @extends('web.face')
 
 @section('content')
-    <section class="inner-intro bg-img light-color overlay-before parallax-background"
-        style="background-image: url('{{ asset('education/theembazaar.com/tf/educate/assets/images/banner/testsmk1.jpg') }}')">
-        <div class="container">
-            <div class="row title">
-                <h1 data-title="Blog"><span>Program Kerja</span></h1>
-            </div>
-        </div>
-    </section>
+    <x-section title="Program Kerja"></x-section>
     <!-- Intro Section -->
     <div id="mission-section" style="padding-top: 1px" class="ptb ptb-xs-60">
         <div class="container">
-            {{-- <div class="row">
-                <div class="col-sm-12">
-                    <div class="block-title v-line mb-35 ">
-                        <h2><span>Vidio </span>Sekolah </h2>
-                        <p class="italic"> Vidio singkat tentang profil sekolah </p>
-                    </div>
-                </div>
-            </div> --}}
+
             <section class="ptb ptb-xs-60">
                 <div class="container">
                     <div class="row">
@@ -41,72 +27,47 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-sm-12">
-                                                            @foreach ($data as $row)
-                                                                <div class="about-block clearfix">
-                                                                    <div class="fl width-25per box-shadow mt-15 mb-xs-15">
-                                                                        <img class="img-responsive"
-                                                                            src="{{ asset('fotosekolah/' . $row->foto) }}"
-                                                                            alt="Photo"
-                                                                            style="width: 300px;
-                                                                        height: 250px;">
-                                                                    </div>
-                                                                    <div
-                                                                        class="text-box pt-45 pb-15 pl-70 pl-xs-0 width-75per fl">
-                                                                        <div class="box-title">
-                                                                            <h3>{!! $row->tujuan !!}</h3>
+                                                            @if (count($data) > 0)
+                                                                @foreach ($data as $row)
+                                                                    <div class="about-block clearfix">
+                                                                        <div
+                                                                            class="fl width-25per box-shadow mt-15 mb-xs-15">
+                                                                            <img class="img-responsive"
+                                                                                src="{{ asset('fotosekolah/' . $row->foto) }}"
+                                                                                alt="Photo"
+                                                                                style="width: 400px;
+                                                                    height: 250px;">
                                                                         </div>
-                                                                        <div class="text-content">
-                                                                            <h4>- Kegiatan</h4>
-                                                                            <p> {!! $row->kegiatan !!}</p>
-                                                                            <h4> - Indikator</h4>
-                                                                            <p>{!! $row->indikator !!}</p>
-                                                                            <h4> - Penanggung Jawab</h4>
-                                                                            <p>{!! $row->penanggungjk !!}</p>
+                                                                        <div
+                                                                            class="text-box pt-45 pb-15 pl-70 pl-xs-0 width-75per fl">
+                                                                            <div class="box-title">
+                                                                                <h3>{!! $row->tujuan !!}</h3>
+                                                                            </div>
+                                                                            <div class="text-content">
+                                                                                <h4>- Kegiatan</h4>
+                                                                                <p> {!! $row->kegiatan !!}</p>
+                                                                                <h4> - Indikator</h4>
+                                                                                <p>{!! $row->indikator !!}</p>
+                                                                                <h4> - Penanggung Jawab</h4>
+                                                                                <p>{!! $row->penanggungjk !!}</p>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
+                                                                @endforeach
+                                                            @else
+                                                                <div class="row mt-80 text-center">
+                                                                    <i style="margin-bottom: 5px;"
+                                                                        class="fa-solid fa-file fa-3x"></i>
+                                                                    <p class="italic">Belum ada Data</p>
                                                                 </div>
-                                                            @endforeach
+                                                            @endif
 
                                                             <div class="about-block clearfix">
-                                                                {{-- <div class="fl width-25per box-shadow mt-15 mb-xs-15"> <img
-                                                                        class="img-responsive"
-                                                                        src="{{ asset('education/theembazaar.com/tf/educate/assets/images/about-1.jpg') }}"
-                                                                        alt="Photo"> </div>
-                                                                <div
-                                                                    class="text-box pt-45 pb-15 pl-70 pl-xs-0 width-75per fl">
-                                                                    <div class="box-title">
-                                                                        <h3>Melaksanakan kegiatan PPDB</h3>
-                                                                    </div>
-                                                                    <div class="text-content">
-                                                                        <h4>- Kegiatan</h4>
-                                                                        <p> Melakukan kegiatan PPDB melalui online</p>
-                                                                        <h4> - Indikator</h4>
-                                                                        <p> 1. Terlaksananya PPDB sesuai jadwal</p>
-                                                                        <p> 2. Tahap 1 melalui jalur afirmasi,perpindahan
-                                                                            ortu & prestasi</p>
-                                                                        <p> 3. Tahap 2 melalui jalar reguler menggunakan
-                                                                            rata-rata nilai rapot</p>
-                                                                        <h4> - Penanggung Jawab</h4>
-                                                                        <p> 1.Waka Kesiswaan</p>
-                                                                        <p> 2.Panitia PPDB</p>
-
-                                                                    </div>
-                                                                </div> --}}
-
-                                                                <div class="pagination-nav text-left mt-60 mtb-xs-30">
+                                                                <div class=" text-left mt-60 mtb-xs-30">
                                                                     {{ $data->links() }}
-                                                                    {{-- <ul>
-                                                                        <li> <a href="javascript:avoid(0);"><i
-                                                                                    class="fa fa-angle-left"></i></a> </li>
-                                                                        <li class="active"> <a
-                                                                                href="javascript:avoid(0);">1</a> </li>
-                                                                        <li> <a href="javascript:avoid(0);">2</a> </li>
-                                                                        <li> <a href="javascript:avoid(0);">3</a> </li>
-                                                                        <li> <a href="javascript:avoid(0);"><i
-                                                                                    class="fa fa-angle-right"></i></a> </li>
-                                                                    </ul> --}}
                                                                 </div>
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -134,8 +95,6 @@
                                     <li> <a href="/identity">Identitas Sekolah</a> </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-sm-3 mt-sm-60">
                             <div class="sidebar-widget">
                                 <h4>Seputar Sekolah</h4>
                                 @foreach ($berita->take(4) as $row)

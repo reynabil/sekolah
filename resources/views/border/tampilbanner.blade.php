@@ -5,9 +5,9 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Beranda</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/news">Berita</a></li>
+                    <li class="breadcrumb-item active"><a href="/border">Border</a></li>
                     <li class="breadcrumb-item active"><a href="">Edit Data </a></li>
                 </ol>
             </div>
@@ -36,23 +36,18 @@
                         @error('judul1')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Deskripsi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="deskripsi1" id="mytextarea">{!! $data->deskripsi1 !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="deskripsi1" class="summernote">{{ $data->deskripsi1 }}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -66,23 +61,18 @@
                         @error('judul2')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Deskripsi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="deskripsi2" id="mytextarea">{!! $data->deskripsi2 !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="deskripsi2" class="summernote">{{ $data->deskripsi2 }}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -94,31 +84,26 @@
                         @error('judul3')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Deskripsi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="deskripsi3" id="mytextarea">{!! $data->deskripsi3 !!}</textarea>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="deskripsi3" class="summernote">{{ $data->deskripsi3 }}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
 
-                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/border"><button class="btn btn-warning">Kembali</button></a>
                     </form>
-                    <button class="btn btn-warning"><a href="/border">kembali</a></button>
                 </div>
             </div>
         </div>

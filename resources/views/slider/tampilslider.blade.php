@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">slider</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Beranda</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/slider">Slider</a></li>
                     <li class="breadcrumb-item active"><a href="">Edit data </a></li>
@@ -27,32 +27,36 @@
                             <input class="form-control" type="file" name="slider1" id="slider1"
                                 value="{{ $data->slider1 }}">
                             <img class="img mb-3" src="{{ asset('banner/' . $data->slider1) }}" alt=""
-                                style="width: 100px;">
+                                style="width: 500px;
+                                height: 200px;">
                         </div>
-                        @error('foto')
+                        @error('slider1')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Masukkan Foto</label>
                             <input class="form-control" type="file" name="slider2" id="slider2"
-                                value="{{ $data->slider1 }}">
+                                value="{{ $data->slider2 }}">
                             <img class="img mb-3" src="{{ asset('banner/' . $data->slider2) }}" alt=""
-                                style="width: 100px;">
+                                style="width: 500px;
+                                height: 200px;">
                         </div>
-                        @error('foto')
+                        @error('slider2')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Masukkan Foto</label>
                             <input class="form-control" type="file" name="slider3" id="slider3"
-                                value="{{ $data->slider }}">
+                                value="{{ $data->slider3 }}">
                             <img class="img mb-3" src="{{ asset('banner/' . $data->slider3) }}" alt=""
-                                style="width: 100px;">
+                                style="width: 500px;
+                                height: 200px;">
                         </div>
-                        @error('foto')
+                        @error('slider3')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/slider"><button class="btn btn-warning">Kembali</button></a>
                     </form>
                 </div>
             </div>

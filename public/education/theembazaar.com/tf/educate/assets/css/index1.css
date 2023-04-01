@@ -3,15 +3,15 @@
 ==============analize section===================*/
 
 .single_top__block {
-	 background: #0c1f38;	
+	 background: #0c1f38;
     color: #ffffff;
     min-height: 180px;
     padding:0 40px 25px;
 }
 @media (min-width: 991px) and (max-width: 1199px){
-.single_top__block {	
+.single_top__block {
 	padding:0 30px 25px;
-}	
+}
 }
 .single_top__block .icon-box__block{
 	width:139px;
@@ -22,7 +22,7 @@
 	border-radius:50%;
 	position:relative;
 	top:-56px;
-	
+
 }
 @media(max-width:991px){
 .single_top__block .icon-box__block{
@@ -156,7 +156,7 @@ p.blue_text__block {
 
 /*Plane Section style start here*/
 .single_plan__block {
-    
+
     position: relative;
     z-index: 1;
 	overflow:hidden;
@@ -178,7 +178,7 @@ p.blue_text__block {
 .block_bg4:after{
   background-image: url(../images/finance-bg4.jpg);
   background-size: cover;
- 
+
 }
 
 .single_plan__block:after {
@@ -207,12 +207,12 @@ p.blue_text__block {
 .block_bg5:after{
   background-image: url(../images/finance-bg2.jpg);
   background-size: cover;
- 
+
 }
 .block_bg6:after{
   background-image: url(../images/finance-bg3.jpg);
   background-size: cover;
-  
+
 
 }
 .single_plan__block:after,
@@ -226,7 +226,7 @@ p.blue_text__block {
     top: 0;
     width: 39%;
     z-index: -1;
-	
+
 }
 .single_plan__block-img:after{
 	 opacity:1;
@@ -238,9 +238,9 @@ p.blue_text__block {
 }
 }
 @media (min-width: 991px) and (max-width: 1199px){
-.plan-content-box {	
+.plan-content-box {
 	width:72%;
-}	
+}
 }
 @media (max-width:767px){
     .plan-content-box{
@@ -689,7 +689,7 @@ footer ul li {
     line-height: 23px;
 }
 .main_footer__block{
-    background-image: url(../images/footer__bg-block.jpg);
+    background-image: url(../images/testsmk1.jpg);
     background-size: cover;
     background-position:top center;
     background-repeat: no-repeat;

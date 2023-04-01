@@ -8,8 +8,8 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/sambutanks">Sambutan Kepala sekolah</a></li>
-                    <li class="breadcrumb-item active"><a href="">Tambah data </a></li>
+                    <li class="breadcrumb-item active"><a href="/history">Sejarah</a></li>
+                    <li class="breadcrumb-item active"><a href="">Edit data </a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -21,41 +21,39 @@
                 <div class="card-body">
                     <form action="/updatedatasejarah/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Masukkan Foto</label>
-                            <input class="form-control" type="file" name="fotos" id="fotos"
-                                value="{{ $data->fotos }}">
-                            <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->fotos) }}" alt=""
-                                style="width: 100px;">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input value="{{ $data->foto }}" name="fotos" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
                         </div>
+                        <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->fotos) }}" alt=""
+                                style="width: 300px;">
                         @error('fotos')
 
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <div>
-                            <section style="padding-top:10px;">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    Deskripsi
-                                                </div>
-                                                <div class="card-body">
-                                                    {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                    <textarea name="sejarah" id="mytextarea">{!! $data->sejarah !!}</textarea>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="sejarah" class="summernote">{!! $data->sejarah !!}</textarea>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/history"><button class="btn btn-warning">Kembali</button></a>
                     </form>
-                    <button class="btn btn-warning"><a href="/history">kembali</a></button>
                 </div>
             </div>
         </div>

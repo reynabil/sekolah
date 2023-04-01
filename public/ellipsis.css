@@ -1,0 +1,9 @@
+.ellipsis{
+    text-overflow: ellipsis!important;
+    overflow: hidden!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical!important;
+    display: -webkit-box!important;
+    word-break: break-word!important;
+}
+

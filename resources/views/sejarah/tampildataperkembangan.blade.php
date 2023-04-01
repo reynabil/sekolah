@@ -31,42 +31,40 @@
                             <input class="form-control" type="text" value="{{ $perkembangan->judul }}" name="judul"
                                 id="judul">
                         </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Masukkan Foto</label>
-                            <input class="form-control" type="file" name="foto" id="foto"
-                                value="{{ $perkembangan->foto }}">
-                            <img class="img mb-3" src="{{ asset('fotosekolah/' . $perkembangan->foto) }}" alt=""
-                                style="width: 100px;">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input name="foto" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
                         </div>
+                        <img class="img mb-3" src="{{ asset('fotosekolah/' . $perkembangan->foto) }}" alt=""
+                                style="width: 300px;">
                         @error('foto')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <div>
-                            <section style="padding-top:10px;">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    Deskripsi
-                                                </div>
-                                                <div class="card-body">
-                                                    {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                    <textarea name="deskripsi" id="mytextarea">{!! $perkembangan->deskripsi !!}</textarea>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="deskripsi" class="summernote">{!! $perkembangan->deskripsi !!}</textarea>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
                         </div>
                         @error('deskripsi')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/history"> <button class="btn btn-warning">Kembali</button></a>
                     </form>
-                    <button class="btn btn-warning"><a href="/history">kembali</a></button>
                 </div>
             </div>
         </div>

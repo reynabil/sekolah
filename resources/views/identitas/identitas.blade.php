@@ -1,14 +1,7 @@
 @extends('web.face')
 
 @section('content')
-    <section class="inner-intro bg-img light-color overlay-before parallax-background "
-        style="background: url({{ asset('education/theembazaar.com/tf/educate/assets/images/banner/testsmk3.jpg') }})">
-        <div class="container">
-            <div class="row title">
-                <h1 data-title="About"><span>Identitas Sekolah</span></h1>
-            </div>
-        </div>
-    </section>
+    <x-section title="Identitas sekolah"></x-section>
     <!-- Intro Section -->
     <!-- About Section -->
     <div id="about-section" class="padding pt-xs-60">
@@ -16,8 +9,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="block-title v-line mb-35 ">
-                        <h2><span>Identitas</span> Sekolah</h2>
-
+                        <h2><span>Identitas </span> Sekolah</h2>
+                        <p class="italic"> Identitas Sekolah SMKN 1 Pasuruan </p>
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -31,11 +25,11 @@
                     {{-- {!! $data->bait2 !!} --}}
                 </div>
                 <div class="col-sm-6">
-                    <img style="width: 1000px; margin-bottom: 30px;"; class="img-responsive"
+                    <img style="width: 450px; margin-bottom: 30px;"; class="img-responsive"
                         src="{{ asset('fotosekolah/' . $data->fotos) }}" alt="Photo">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.3554894960134!2d112.91365326049677!3d-7.6448677234092015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7c60c36bb4325%3A0x98bc4d9aa7c440c!2sVocational%20High%20School%201%20Pasuruan!5e0!3m2!1sen!2sid!4v1674697257446!5m2!1sen!2sid"
-                        width="555" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="450" height="420" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
@@ -50,6 +44,7 @@
                     <div class="block-title v-line mb-35 ">
                         <h2><span>Vidio </span>Sekolah </h2>
                         <p class="italic"> Vidio singkat tentang profil sekolah </p>
+                        <hr>
                     </div>
                 </div>
             </div>

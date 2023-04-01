@@ -5,7 +5,8 @@
         <div class="container-fluid">
             <div class="page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK & PD</a>
+                    <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Data Info PTK
+                            & PD</a>
                     </li>
                     <li class="breadcrumb-item active"><a href="/peserta">Data Pendidik</a></li>
                     <li class="breadcrumb-item active"><a href="/peserta">{{ $data->nama_kelas }}</a></li>
@@ -35,26 +36,50 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                    <tr>
-                                        <th scope="row">{{ $no++ }}</th>
-                                        <td>{{ $data->nama_kelas }}</td>
-                                        <td>{{ $data->jl }}</td>
-                                        <td>{{ $data->jp }}</td>
-                                        <td>{{ $data->jml }}</td>
-                                        <td>
-                                            <a href="/tampildatapendidik/{{ $data->id }}" class="btn btn-warning"><i
-                                                    class="fa-sharp fa-solid fa-pen-to-square"></i></a>
-                                            <a href="#" class="btn btn-danger delete" data-id="{{ $data->id }}"
-                                                data-nama_dosen="{{ $data->nama_dosen }}"><i
-                                                    class="fa-sharp fa-solid fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                <tr>
+                                    <th scope="row">{{ $no++ }}</th>
+                                    <td>{{ $data->nama_kelas }}</td>
+                                    <td>{{ $data->jl }}</td>
+                                    <td>{{ $data->jp }}</td>
+                                    <td>{{ $data->jml }}</td>
+                                    <td>
+                                        <a href="/tampildataXI/{{ $data->id }}" class="btn btn-warning"><i
+                                                class="fa-sharp fa-solid fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn btn-danger delete" data-id="{{ $data->id }}"
+                                            data-nama_dosen="{{ $data->nama_dosen }}"><i
+                                                class="fa-sharp fa-solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
+        integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script>
+        $('.delete').click(function() {
+            var mahasiswaid = $(this).attr('data-id');
+            var nama = $(this).attr('data-nama_dosen');
+            swal({
+                    title: "Apakah Anda Yakin?",
+                    text: "Kamu Akan Menghapus Data  " + nama + " ",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = "/deleteXI/" + mahasiswaid + ""
+                        swal("Data telah dihapus!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Data Tidak Jadi Dihapus");
+                    }
+                });
+        });
+    </script>
 @endsection

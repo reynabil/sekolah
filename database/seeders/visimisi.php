@@ -16,7 +16,7 @@ class visimisi extends Seeder
     public function run()
     {
         DB::table('visimisis')->insert([
-            'foto' => 'smk1.png',
+            'foto' => '1679884882.png',
             'visi' => 'Terwujudnya insan yang berakhlak mulia, kreatif, inovatif, mandiri, dan peduli lingkungan.',
             'misi' => '<p>1. Meningkatkan Nilai Keimanan dan Ketaqwaan kepada Tuhan Yang Maha Esa</p>
             <p> 2. Menumbuhkembangkan Jiwa Nasionalisme</p>

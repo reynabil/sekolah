@@ -8,7 +8,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ asset('template/nabil/xhtml/javascript:void(0)') }}">Profil</a>
                     </li>
-                    <li class="breadcrumb-item active"><a href="/sambutanks">Visi Misi</a></li>
+                    <li class="breadcrumb-item active"><a href="/identitas">Identitas</a></li>
                     <li class="breadcrumb-item active"><a href="">Edit data </a></li>
                 </ol>
             </div>
@@ -29,38 +29,35 @@
                 <div class="card-body">
                     <form action="/updatedataidentitas/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Masukkan Foto</label>
-                            <input class="form-control" type="file" name="fotos" id="fotos"
-                                value="{{ $data->fotos }}">
-                            <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->fotos) }}" alt=""
-                                style="width: 100px;">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input value="{{ $data->foto }}" name="fotos" type="file" class="custom-file-input">
+                                <label class="custom-file-label">Pilih file</label>
+                            </div>
                         </div>
-                        <section style="padding-top:10px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Bait 1
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="bait1" id="mytextarea">{!! $data->bait1 !!}</textarea>
-                                            </div>
-                                        </div>
+                        <img class="img mb-3" src="{{ asset('fotosekolah/' . $data->fotos) }}" alt=""
+                            style="width: 300px;">
+
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Deskripsi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <textarea name="bait1" class="summernote">{!! $data->bait1 !!}</textarea>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
-                        
-
-
-
-                        <button type="submit" class="btn btn-primary mb-3">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <a href="/identitas"><button class="btn btn-warning">Kembali</button></a>
                     </form>
-                    <button class="btn btn-warning"><a href="/identitas">kembali</a></button>
                 </div>
             </div>
         </div>
