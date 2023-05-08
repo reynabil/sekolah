@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\tenaga;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -25,8 +26,9 @@ class TenagaController extends Controller
     public function nonpendidik()
     {
         $data = tenaga::paginate(8);
+        $sosmed = sosmed::all();
         $berita = berita::all();
-        return view('tenagas.nonpendidik',compact('berita','data'));
+        return view('tenagas.nonpendidik',compact('berita','data','sosmed'));
     }
     public function tambahdatatenaga()
     {

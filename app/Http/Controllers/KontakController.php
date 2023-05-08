@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\kontak;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 
 class KontakController extends Controller
@@ -16,7 +17,8 @@ class KontakController extends Controller
     public function contact()
     {
         $berita = berita::all();
-        return view('kontak.contact',compact('berita'));
+        $sosmed = sosmed::all();
+        return view('kontak.contact',compact('berita','sosmed'));
     }
     public function insertpesan(Request $request)
     {

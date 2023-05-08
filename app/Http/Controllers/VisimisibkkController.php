@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\visimisibkk;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class VisimisibkkController extends Controller
     {
         $data = visimisibkk::findorfail(1);
         $berita = berita::all();
-        return view('visimisibkk.visimisibkk', compact('berita', 'data'));
+        $sosmed = sosmed::all();
+        return view('visimisibkk.visimisibkk', compact('berita', 'data','sosmed'));
     }
     public function visimisib()
     {

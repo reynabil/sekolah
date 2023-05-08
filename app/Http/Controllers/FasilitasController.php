@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\berita;
 use App\Models\denah;
+use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\fasilitas;
 use Illuminate\Http\Request;
 
@@ -20,14 +21,16 @@ class FasilitasController extends Controller
         $data1 = fasilitas::first();
         $berita = berita::all();
         $data = fasilitas::findorfail($id);
-        return view('fasilitas.foto', compact('data', 'berita', 'data1'));
+        $sosmed = sosmed::all();
+        return view('fasilitas.foto', compact('data', 'berita', 'data1','sosmed'));
     }
     public function fase()
     {
         $data1 = denah::findorfail(1);
         $berita = berita::all();
         $data = fasilitas::all();
-        return view('fasilitas.fase', compact('data', 'berita', 'data1'));
+        $sosmed = sosmed::all();
+        return view('fasilitas.fase', compact('data', 'berita', 'data1','sosmed'));
     }
     public function tambahdatafasilitas()
     {

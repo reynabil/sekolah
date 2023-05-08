@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\sasaran;
 use App\Models\sasaranmutu;
 use Illuminate\Http\Request;
@@ -14,7 +15,8 @@ class SasaranmutuController extends Controller
         $data1 = sasaranmutu::all();
         $data = sasaran::findorfail(1);
         $berita = berita::all();
-        return view('sasaranmutu.sasaranmutu', compact('berita', 'data','data1'));
+        $sosmed = sosmed::all();
+        return view('sasaranmutu.sasaranmutu', compact('berita', 'data','data1','sosmed'));
     }
     public function sasaranmutuindex()
     {

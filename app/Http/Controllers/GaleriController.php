@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\galeri;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver;
 
@@ -18,7 +19,8 @@ class GaleriController extends Controller
     {
         $data = galeri::paginate(12);
         $berita = berita::all();
-        return view('galeri.gallery', compact('berita', 'data'));
+        $sosmed = sosmed::all();
+        return view('galeri.gallery', compact('berita', 'data','sosmed'));
     }
     public function tambahgaleri()
     {

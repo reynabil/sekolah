@@ -36,6 +36,7 @@ use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\LowongankerjaController;
 use App\Http\Controllers\KompetensikeahlianController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\SosmedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,6 +124,10 @@ Route::group(['middleware' => ['auth', 'hakakses:Admin']], function () {
     Route::get('/tampilfotohome/{id}', [FotohomeController::class, 'tampilfotohome'])->name('tampilfotohome');
     Route::post('/updatefotohome/{id}', [FotohomeController::class, 'updatefotohome'])->name('updatefotohome');
     Route::get('/deletefotohome/{id}', [FotohomeController::class, 'deletefotohome'])->name('deletefotohome');
+
+    Route::get('/sosmed', [SosmedController::class, 'sosmed'])->name('sosmed');
+    Route::get('/tambahsosmed', [SosmedController::class, 'tambahsosmed'])->name('tambahsosmed');
+    Route::post('/insertsosmed', [SosmedController::class, 'insertsosmed'])->name('insertsosmed');
 
     //start Profil
 

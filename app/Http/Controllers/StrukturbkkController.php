@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\strukturbkk;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class StrukturbkkController extends Controller
     {
         $data = strukturbkk::findorfail(1);
         $berita = berita::all();
-        return view('strukturbkk.strukturoganisasibkk',compact('data','berita'));
+        $sosmed = sosmed::all();
+        return view('strukturbkk.strukturoganisasibkk',compact('data','berita','sosmed'));
     }
     public function tampilstrukturbkk($id)
     {

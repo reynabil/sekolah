@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\kegiatan;
 use App\Models\kegiatanbkk;
 use Illuminate\Http\Request;
-use PhpParser\Node\Expr\AssignOp\BitwiseOr;
 
 use function PHPUnit\Framework\returnValue;
+use PhpParser\Node\Expr\AssignOp\BitwiseOr;
 
 class KegiatanbkkController extends Controller
 {
@@ -20,8 +21,9 @@ class KegiatanbkkController extends Controller
     public function kegiatanbkk()
     {
         $data = kegiatanbkk::all();
+        $sosmed = sosmed::all();
         $berita  = berita::all();
-        return view('kegiatanbkk.kegiatanbkk',compact('berita','data'));
+        return view('kegiatanbkk.kegiatanbkk',compact('berita','data','sosmed'));
     }
     public function selengkapnyabkk($id)
     {

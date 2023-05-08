@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\ekskul;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
 
@@ -17,8 +18,9 @@ class EkskulController extends Controller
     public function ekstra()
     {
         $berita = berita::all();
-        $data = ekskul::paginate(61);
-        return view('ekskul.ekstra', compact('data','berita'));
+        $data = ekskul::paginate(6);
+        $sosmed = sosmed::all();
+        return view('ekskul.ekstra', compact('data','berita','sosmed'));
     }
     public function detail($id)
     {

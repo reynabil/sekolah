@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\visimisi;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class VisimisiController extends Controller
     {
         $berita = berita::latest('created_at')->get();
         $data = visimisi::findorfail(1);
-        return view('visimisi.visi',compact('data','berita'));
+        $sosmed = sosmed::all();
+        return view('visimisi.visi',compact('data','berita','sosmed'));
     }
 
     public function tampildatavisi($id)

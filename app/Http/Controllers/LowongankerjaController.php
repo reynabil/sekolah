@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
-use App\Models\lowongankerja;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
+use App\Models\lowongankerja;
 use Psy\CodeCleaner\FunctionReturnInWriteContextPass;
 
 class LowongankerjaController extends Controller
@@ -13,7 +14,8 @@ class LowongankerjaController extends Controller
     {
         $data = lowongankerja::paginate(6);
         $berita = berita::all();
-        return view('lowongankerja.infolowongankerja',compact('berita','data'));
+        $sosmed = sosmed::all();
+        return view('lowongankerja.infolowongankerja',compact('berita','data','sosmed'));
     }
     public function lowongankerja()
     {

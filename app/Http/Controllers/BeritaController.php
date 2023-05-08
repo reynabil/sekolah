@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,11 +17,13 @@ class BeritaController extends Controller
             $data = berita::where('judul', 'LIKE', '%' . $search . '%')->paginate(8);
             $data->appends($request->all());
             $berita = berita::all();
+            $sosmed = sosmed::all();
         } else {
             $data = berita::paginate(8);
             $berita = berita::all();
+            $sosmed = sosmed::all();
         }
-        return view('berita.berita' ,compact('data','berita'));
+        return view('berita.berita' ,compact('data','berita','sosmed'));
     }
     public function selengkapnya($id)
     {
@@ -29,8 +32,9 @@ class BeritaController extends Controller
         $data = berita::all()->sortBy('created_at');
         $berita = berita::first();
         $each = berita::findorfail($id);
+        $sosmed = sosmed::all();
         $each->increment('views');
-        return view('berita.Selengkapnya',compact('data','berita','each',));
+        return view('berita.Selengkapnya',compact('data','berita','each','sosmed'));
     }
     public function news()
     {

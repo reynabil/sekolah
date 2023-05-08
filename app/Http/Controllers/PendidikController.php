@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\pendidik;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Carbon\Carbon;
 
 class PendidikController extends Controller
 {
@@ -24,8 +25,9 @@ class PendidikController extends Controller
     public function teacher()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = pendidik::paginate(8);
-        return view('pendidiks.pendidik', compact('data', 'berita'));
+        return view('pendidiks.pendidik', compact('data', 'berita','sosmed'));
     }
     public function tambahdatapendidik()
     {

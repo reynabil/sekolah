@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\berita;
 use App\Models\tiga;
+use App\Models\berita;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 
 class TigaController extends Controller
@@ -17,7 +18,8 @@ class TigaController extends Controller
     {
         $data = tiga::paginate(3);
         $berita = berita::latest('created_at')->get();
-        return view('tigas.ajarXII',compact('data','berita'));
+        $sosmed = sosmed::all();
+        return view('tigas.ajarXII',compact('data','berita','sosmed'));
     }
     public function tambahdatatigas()
     {

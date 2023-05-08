@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\kelulusan;
 use Illuminate\Http\Request;
 
@@ -21,11 +22,13 @@ class KelulusanController extends Controller
             $data = kelulusan::where('kelas', 'LIKE', '%' . $search . '%')->orWhere('tanggal', 'LIKE', '%' . $search . '%')->paginate(6);
             $data->appends($request->all());
             $berita = berita::all();
+            $sosmed = sosmed::all();
         } else {
             $data = kelulusan::paginate(6);
             $berita = berita::all();
+            $sosmed = sosmed::all();
         }
-        return view('kelulusan.infokelulusan', compact('data', 'berita'));
+        return view('kelulusan.infokelulusan', compact('data', 'berita','sosmed'));
     }
     public function tambahkelulusan()
     {

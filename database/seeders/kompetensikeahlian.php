@@ -23,7 +23,7 @@ class kompetensikeahlian extends Seeder
         ]);
         DB::table('kompetensikeahlians')->insert([
             'foto' => 'dkv.png',
-            'nama_jurusan' => 'Desan Komunikasi Visual',
+            'nama_jurusan' => 'Desain Komunikasi Visual',
             'foto_detail' => 'dkv.jpeg',
             'deskripsi' => '<p>Multimedia adalah bentuk komunikasi yang menggunakan kombinasi berbagai bentuk konten seperti teks, audio, gambar, animasi, atau video menjadi satu presentasi interaktif, berbeda dengan media massa tradisional, seperti bahan cetak atau rekaman audio, yang menampilkan sedikit fitur. tidak ada interaksi antar pengguna.</p>',
         ]);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\ekskul;
+use App\Models\sosmed;
 use App\Models\sambutanks;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,6 @@ class SambutanksController extends Controller
     {
 
         $data = sambutanks::all();
-
         return view('sambutanks.sambutanks', compact('data'));
     }
     public function sambutan()
@@ -22,7 +22,8 @@ class SambutanksController extends Controller
         $berita = berita::all();
         $ekskul = ekskul::first();
         $data = sambutanks::findorfail(1);
-        return view('sambutanks.sambutan', compact('data','ekskul','berita'));
+        $sosmed = sosmed::all();
+        return view('sambutanks.sambutan', compact('data','ekskul','berita','sosmed'));
     }
 
     public function tampildatasambutanks($id)

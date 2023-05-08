@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\identitas;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class IdentitasController extends Controller
     public function identity()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = identitas::findorfail(1);
-        return view('identitas.identitas', compact('data', 'berita'));
+        return view('identitas.identitas', compact('data', 'berita','sosmed'));
     }
 
     public function tampildataidentitas($id)

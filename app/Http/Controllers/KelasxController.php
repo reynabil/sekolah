@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\kelasx;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 
 class KelasxController extends Controller
@@ -17,7 +18,8 @@ class KelasxController extends Controller
     {
         $data = kelasx::paginate(3);
         $berita = berita::latest('created_at')->get();
-        return view('kelasxes.ajarx',compact('berita','data'));
+        $sosmed = sosmed::all();
+        return view('kelasxes.ajarx',compact('berita','data','sosmed'));
     }
     public function tambahdatakelasxes()
     {

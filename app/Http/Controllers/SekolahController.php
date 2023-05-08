@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\sekolah;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class SekolahController extends Controller
     public function phbn()
     {
         $data = sekolah::all()->sortBy('tanggal');
+        $sosmed = sosmed::all();
         $berita = berita::all();
-        return view('sekolahs.phbn',compact('data','berita'));
+        return view('sekolahs.phbn',compact('data','berita','sosmed'));
     }
     public function tambahdatasekolahs()
     {

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
-use App\Models\kompetensikeahlian;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
+use App\Models\kompetensikeahlian;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class KompetensikeahlianController extends Controller
@@ -13,7 +14,8 @@ class KompetensikeahlianController extends Controller
     {
         $data = kompetensikeahlian::paginate(9);
         $berita = berita::latest('created_at')->get();
-        return view('kompetensikeahlian.kompetensikeahlian', compact('berita','data'));
+        $sosmed = sosmed::all();
+        return view('kompetensikeahlian.kompetensikeahlian', compact('berita','data','sosmed'));
     }
     public function kompetensikeahlianindex()
     {

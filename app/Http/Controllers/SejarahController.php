@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\sejarah;
 use App\Models\perkembangan;
 use Illuminate\Http\Request;
@@ -14,7 +15,8 @@ class SejarahController extends Controller
         $berita = berita::all();
         $perkembangan = perkembangan::all();
         $data = sejarah::findorfail(1);
-        return view('sejarah.sejarah',compact('data','perkembangan','berita'));
+        $sosmed = sosmed::all();
+        return view('sejarah.sejarah',compact('data','perkembangan','berita','sosmed'));
     }
     public function history()
     {

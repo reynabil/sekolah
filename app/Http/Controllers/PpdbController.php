@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\berita;
 use App\Models\ppdb;
+use App\Models\berita;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
 
@@ -17,8 +18,9 @@ class PpdbController extends Controller
     public function kegiatanppdb()
     {
         $data = ppdb::findorfail(1);
+        $sosmed = sosmed::all();
         $berita  = berita::all();
-        return view('ppdb.kegiatanppdb',compact('berita','data'));
+        return view('ppdb.kegiatanppdb',compact('berita','data','sosmed'));
     }
 
     public function tampildatappdb($id)

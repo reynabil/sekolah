@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\proker;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,7 +20,8 @@ class ProkerController extends Controller
 
         $data = proker::paginate(2);
         $berita = berita::latest('created_at')->get();
-        return view('proker.program', compact('berita', 'data'));
+        $sosmed = sosmed::all();
+        return view('proker.program', compact('berita', 'data','sosmed'));
     }
 
     public function tambahproker()

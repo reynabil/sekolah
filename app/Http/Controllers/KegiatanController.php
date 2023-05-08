@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\kegiatan;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class KegiatanController extends Controller
     public function keagamaan()
     {
         $data = kegiatan::all()->sortBy('tanggal');
+        $sosmed = sosmed::all();
         $berita = berita::all();
-        return view('kegiatans.keagamaan',compact('berita','data'));
+        return view('kegiatans.keagamaan',compact('berita','data','sosmed'));
     }
     public function tambahdatakegiatans()
     {

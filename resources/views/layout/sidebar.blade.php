@@ -16,6 +16,7 @@
                     <li><a href="/article">Artikel</a></li>
                     <li><a href="/fotohome">Kegiatan Terakhir</a></li>
                     <li><a href="/kontak">Pesan</a></li>
+                    <li><a href="/sosmed">Sosmed</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

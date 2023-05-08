@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\berita;
 use App\Models\empat;
+use App\Models\berita;
+use App\Models\sosmed;
 use Illuminate\Http\Request;
 
 class EmpatController extends Controller
@@ -16,8 +17,9 @@ class EmpatController extends Controller
     public function ajarxiiika()
     {
         $berita = berita::latest('created_at')->get();
+        $sosmed = sosmed::all();
         $data = empat::paginate(3);
-        return view('empats.ajarXIIIKA',compact('data','berita'));
+        return view('empats.ajarXIIIKA',compact('data','berita','sosmed'));
     }
     public function tambahdataempats()
     {

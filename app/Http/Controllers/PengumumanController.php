@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\pengumuman;
-use App\Models\siswaditerima;
 use Illuminate\Http\Request;
+use App\Models\siswaditerima;
 
 class PengumumanController extends Controller
 {
@@ -13,7 +14,8 @@ class PengumumanController extends Controller
     {
         $data = pengumuman::paginate(6);
         $berita = berita::all();
-        return view('pengumuman.pengumumanbkk', compact('berita', 'data'));
+        $sosmed = sosmed::all();
+        return view('pengumuman.pengumumanbkk', compact('berita', 'data','sosmed'));
     }
     public function pengumuman()
     {
@@ -25,7 +27,8 @@ class PengumumanController extends Controller
     {
         $data = siswaditerima::where('id_judul', $id)->get();
         $berita = berita::all();
-        return view('pengumuman.siswa', compact('berita', 'data'));
+        $sosmed = sosmed::all();
+        return view('pengumuman.siswa', compact('berita', 'data','sosmed'));
     }
     public function tambahpengumuman()
     {

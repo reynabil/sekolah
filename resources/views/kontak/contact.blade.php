@@ -24,7 +24,7 @@
                         <div class="col-sm-4 pb-xs-30"> <i class="ion-ios-email icon-circle pos-s"></i>
                             <p class="mt-15"> smk1pasuruan@yahoo.com</p>
                         </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>

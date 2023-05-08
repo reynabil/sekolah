@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\artikel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,11 +22,13 @@ class ArtikelController extends Controller
             $data = artikel::where('judul', 'LIKE', '%' . $search . '%')->paginate(8);
             $data->appends($request->all());
             $berita = berita::all();
+            $sosmed = sosmed::all();
         } else {
             $data = artikel::paginate(8);
             $berita = berita::all();
+            $sosmed = sosmed::all();
         }
-        return view('artikel.artikel', compact('data','berita'));
+        return view('artikel.artikel', compact('data','berita','sosmed'));
     }
     public function detailartikel($id)
     {

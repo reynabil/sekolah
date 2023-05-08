@@ -15,6 +15,7 @@ use App\Models\medsos;
 use App\Models\pendidik;
 use App\Models\slider;
 use App\Models\sambutanks;
+use App\Models\sosmed;
 use App\Models\tenaga;
 use Illuminate\Http\Request;
 
@@ -32,7 +33,8 @@ class HomeController extends Controller
         $ekskul = ekskul::all();
         $border = border::first();
         $berita = berita::latest('created_at')->get();
-        return view('web.home', compact('sambutan', 'ekskul', 'slider', 'border', 'berita', 'kegiatan', 'pendidik', 'tenaga', 'jurusan','fasilitas'));
+        $sosmed = sosmed::all();
+        return view('web.home', compact('sosmed','sambutan', 'ekskul', 'slider', 'border', 'berita', 'kegiatan', 'pendidik', 'tenaga', 'jurusan','fasilitas'));
     }
 
     public function footer()

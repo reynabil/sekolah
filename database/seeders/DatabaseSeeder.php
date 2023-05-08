@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
             alumni::class,
             kompetensikeahlian::class,
             fotohome::class,
-
+            sosmed::class,
         ]);
     }
 }

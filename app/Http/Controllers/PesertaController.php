@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\peserta;
 use App\Models\sebelas;
 use App\Models\duabelas;
@@ -44,32 +45,37 @@ class PesertaController extends Controller
     public function murid()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = peserta::all()->sortBy('nama_kelas');
-        return view('pesertas.murid', compact('data', 'berita'));
+        return view('pesertas.murid', compact('data', 'berita','sosmed'));
     }
     public function sepuluh()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = peserta::all()->sortBy('nama_kelas');
-        return view('pesertas.sepuluh', compact('data', 'berita'));
+        return view('pesertas.sepuluh', compact('data', 'berita','sosmed'));
     }
     public function sebelas()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = sebelas::all()->sortBy('nama_kelas');
-        return view('pesertas.sebelas', compact('data', 'berita'));
+        return view('pesertas.sebelas', compact('data', 'berita','sosmed'));
     }
     public function duabelas()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = duabelas::all()->sortBy('nama_kelas');
-        return view('pesertas.duabelas', compact('data', 'berita'));
+        return view('pesertas.duabelas', compact('data', 'berita','sosmed'));
     }
     public function tigabelas()
     {
         $berita = berita::all();
+        $sosmed = sosmed::all();
         $data = tigabelas::all()->sortBy('nama_kelas');
-        return view('pesertas.tigabelas', compact('data', 'berita'));
+        return view('pesertas.tigabelas', compact('data', 'berita','sosmed'));
     }
     public function tambahdatapeserta()
     {

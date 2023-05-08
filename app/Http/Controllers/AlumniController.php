@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\alumni;
 use App\Models\berita;
+use App\Models\sosmed;
 use App\Models\bioalumni;
 use Illuminate\Http\Request;
 
@@ -23,13 +24,15 @@ class AlumniController extends Controller
     public function tambah()
     {
         $berita = berita::all();
-        return view('alumni.tambah', compact('berita'));
+        $sosmed = sosmed::all();
+        return view('alumni.tambah', compact('berita','sosmed'));
     }
     public function alumni()
     {
         $data = alumni::where('status', 1)->paginate(8);;
         $berita = berita::all();
-        return view('alumni.alumni', compact('berita', 'data'));
+        $sosmed = sosmed::all();
+        return view('alumni.alumni', compact('berita', 'data','sosmed'));
     }
     public function detailalumni($id)
     {
