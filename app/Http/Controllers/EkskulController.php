@@ -28,7 +28,8 @@ class EkskulController extends Controller
         $each = ekskul::all();
         $cari = ekskul::findorfail($id);
         $data = ekskul::first();
-        return view('ekskul.detail', compact('data','cari','each','berita'));
+        $sosmed = sosmed::all();
+        return view('ekskul.detail', compact('data','cari','each','berita','sosmed'));
     }
     public function tambahdataekskul()
     {

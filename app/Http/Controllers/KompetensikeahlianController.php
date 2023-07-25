@@ -27,7 +27,8 @@ class KompetensikeahlianController extends Controller
         $data1 = kompetensikeahlian::latest('created_at')->get();
         $berita = berita::latest('created_at')->get();
         $data = kompetensikeahlian::findorfail($id);
-        return view('kompetensikeahlian.detailkompetensi',compact('data','berita','data1'));
+        $sosmed = sosmed::all();
+        return view('kompetensikeahlian.detailkompetensi',compact('data','berita','data1','sosmed'));
     }
     public function tambahkompetensi()
     {

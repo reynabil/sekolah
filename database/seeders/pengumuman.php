@@ -16,7 +16,7 @@ class pengumuman extends Seeder
     public function run()
     {
         DB::table('pengumumen')->insert([
-            'foto' => 'adhivasi.png',
+            'foto' => 'download.png',
             'judul' => 'PENGUMUMAN JADWAL TES PT. ADHIKARI INOVASI INDONESIA',
             'created_at' => '2023-1-17',
         ]);

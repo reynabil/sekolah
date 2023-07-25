@@ -35,10 +35,11 @@ class ArtikelController extends Controller
         // DB::table('artikels')->increment('views');
         // $views = DB::table('artikels')->limit(1)->get();
         $data = artikel::all();
+        $sosmed = sosmed::all();
         $berita = artikel::first();
         $each = artikel::findorfail($id);
         $each->increment('views');
-        return view('artikel.selengkapnya', compact('data', 'berita', 'each'));
+        return view('artikel.selengkapnya', compact('data', 'berita', 'each','sosmed'));
     }
     public function tambahartikel()
     {
